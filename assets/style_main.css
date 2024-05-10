@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300;600&display=swap');
+
+
+:root{
+    --maincolor: #f99f38;
+    --border: .1rem solid rgba(0,0,0,10%);
+    --box-shadow: 0 .5rem 1rem #f99f38;
+    --radius: .5rem;
+    --text: #414141;
+}
+*{
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: 0;
+    outline: none;
+    transition: all .3s ease-out;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9%;
+    height: 6rem;
+}
+nav a{
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    color: var(--text);
+}
+
+nav a:hover{
+    color: var(--maincolor);
+}
+header img{
+    width: 7rem;
+    height: 7rem;
+}
+
+#slideshow .welcom {
+    position: absolute;
+    top: 50%;
+    margin-left: 9%;
+    color: #ddd;
+    z-index: 2;
+}
+
+
+#myVideo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* #slideshow {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 50rem;
+  }
+
+  #slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  #slideshow img.active {
+    opacity: 1;
+  } */
