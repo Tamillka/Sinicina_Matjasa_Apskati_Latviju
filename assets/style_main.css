@@ -34,7 +34,7 @@ header{
     height: 6rem;
 }
 nav a{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-left: 2rem;
     color: var(--text);
 }
@@ -49,12 +49,11 @@ header img{
 
 #slideshow .welcom {
     position: absolute;
-    top: 50%;
+    top: 40%;
     margin-left: 9%;
     color: #ddd;
     z-index: 2;
 }
-
 
 #myVideo {
     width: 100%;
@@ -66,6 +65,28 @@ header img{
     top: 0;
     bottom: 0;
     z-index: -1;
+}
+
+.welcom{
+    width: 46rem;
+    background: rgba(0,0,0,30%);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+}
+
+.welcom p{
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.welcom h1{
+    font-size: 2.2rem;
+    margin: .6rem 0 1.3rem 0;
+    padding-right: 2rem;
+}
+
+span{
+    box-shadow: 8px 8px 8px -3px #f99f38;
 }
 
 /* #slideshow {

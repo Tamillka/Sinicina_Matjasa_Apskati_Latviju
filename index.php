@@ -23,7 +23,7 @@
     <div class="welcom">
     <p>Esat sveicināti</p>
     <h1>Tūrisma aģentūrā <span>Apskati Latviju</span></h1>
-    <p>Jau vairākus gadus mūsu uzņēmums izstrādā tūrisma maršrutus Latvijā<br>Apskatiet mūsu populārākos maršrutu piedāvājumus un izbaudiet Latviju kopā ar mums!</p>
+    <p>Jau vairākus gadus mūsu uzņēmums izstrādā tūrisma maršrutus Latvijā.<br>Apskatiet mūsu populārākos maršrutu piedāvājumus un izbaudiet Latviju kopā ar mums!</p>
 </div>
     <div class="video">
         <video autoplay muted loop id="myVideo">
