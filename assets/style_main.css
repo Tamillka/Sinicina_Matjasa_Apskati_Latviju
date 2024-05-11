@@ -7,6 +7,7 @@
     --box-shadow: 0 .5rem 1rem #f99f38;
     --radius: .5rem;
     --text: #414141;
+    --bg: #ffe4c6;
 }
 *{
     font-family: 'Nunito', sans-serif;
@@ -19,6 +20,32 @@
     transition: all .3s ease-out;
 }
 
+.btn{
+    display: inline-block;
+    padding: .5rem 2.3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text);
+    background: var(--maincolor);
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    z-index: 1;
+}
+
+ section{
+    padding: 2rem 9%;
+} 
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+h1{
+    font-size: 3rem;
+    text-align: center;
+    margin: .6rem 0 1.7rem 0;
+}
 header{
     position: fixed;
     top: 0;
@@ -47,19 +74,22 @@ header img{
     height: 7rem;
 }
 
-#slideshow .welcom {
+#parmums{
+    padding: 0;
+}
+#parmums .welcom {
     position: absolute;
     top: 40%;
     margin-left: 9%;
     color: #ddd;
-    z-index: 2;
+    z-index: 1;
 }
 
 #myVideo {
     width: 100%;
     height: auto;
     object-fit: cover;
-    position: fixed;
+    position: relative;
     left: 0;
     right: 0;
     top: 0;
@@ -80,6 +110,7 @@ header img{
 }
 
 .welcom h1{
+    text-align:left;
     font-size: 2.2rem;
     margin: .6rem 0 1.3rem 0;
     padding-right: 2rem;
@@ -89,6 +120,78 @@ span{
     box-shadow: 8px 8px 8px -3px #f99f38;
 }
 
+#kontakti .icon{
+    border-radius: var(--radius);
+    box-shadow: var(--box_shadow);
+    border: var(--border);
+    padding: 2rem;
+    text-align: center;
+}
+
+#kontakti .icon h3{
+    display: inline-block; 
+    color: var(--text);
+    padding: 1rem 0;
+    font-size: 2rem;
+    box-shadow: 0 8px 6px -6px #f99f38;
+    padding-bottom: 5px;
+}
+
+#kontakti .icon p{
+    color: var(--text);
+    font-size: 1.3rem;
+    padding-top: .8rem;
+}
+
+#kontakti .icon i{
+    width: 6rem;
+    height: 6rem;
+    font-size: 2.5rem;
+    color: var(--maincolor);
+    background: var(--bg);
+    border-radius: .4rem 2rem 1.3rem 2rem;
+    line-height: 6rem;
+}
+
+#kontakti .row{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.container{
+    display: flex;
+    gap: 1.5rem;
+    height: 5.5rem;
+}
+
+#kontakti form{
+    flex: 1 1 45rem;
+    width: 100%;
+    padding: 2rem;
+}
+form .box{
+    width: 100%;
+    font-size: 1.6rem;
+    margin: .7rem 0;
+    padding: 1rem;
+    border: var(--border);
+    border-radius: var(--radius);
+    color: var(--black);
+    background: #f7f7f7;
+}
+
+form .box:focus{
+    background: var(--bg);
+}
+
+form textarea{
+    resize: none;
+    /* height: 4rem; */
+}
+/* iframe{
+
+} */
 /* #slideshow {
     position: relative;
     max-width: 100%;
