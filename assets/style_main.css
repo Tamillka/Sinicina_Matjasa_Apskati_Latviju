@@ -6,7 +6,7 @@
     --border: .1rem solid rgba(0,0,0,10%);
     --box-shadow: 0 .5rem 1rem #f99f38;
     --radius: .5rem;
-    --text: #414141;
+    --text: #292929;
     --bg: #ffe4c6;
 }
 *{
@@ -38,7 +38,12 @@
 } 
 .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+.box-container1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
     gap: 1.5rem;
 }
 h1{
@@ -106,7 +111,8 @@ header img{
 
 .welcom p{
     font-size: 1.3rem;
-    line-height: 1.5;
+    line-height: 1.75;
+    color: #eee;
 }
 
 .welcom h1{
@@ -168,7 +174,6 @@ span{
 #kontakti form{
     flex: 1 1 45rem;
     width: 100%;
-    padding: 2rem;
 }
 form .box{
     width: 100%;
@@ -177,7 +182,7 @@ form .box{
     padding: 1rem;
     border: var(--border);
     border-radius: var(--radius);
-    color: var(--black);
+    color: var(--text);
     background: #f7f7f7;
 }
 
@@ -188,6 +193,40 @@ form .box:focus{
 form textarea{
     resize: none;
     /* height: 4rem; */
+}
+
+#piedavajumi .box{
+    text-align: center;
+    border: var(--border);
+    box-shadow: var(--box_shadow);
+    border-radius: var(--radius);
+    padding: 2rem 2rem;
+}
+#piedavajumi .box .fotos{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+#piedavajumi .box .fotos img{
+    width: 45%;
+    height: 25rem;
+}
+#piedavajumi .box .fotos iframe{
+    width: 45%;
+    height: 25rem;
+}
+#piedavajumi .box h2{
+    color: var(--text);
+    font-size: 2.2rem;
+    padding-bottom: 1.5rem;
+}
+#piedavajumi .box p{
+    color: var(--text);
+    font-size: 1.5rem;
+    padding-bottom: .5rem;
+    line-height: 2;
 }
 /* iframe{
 
@@ -210,3 +249,16 @@ form textarea{
   #slideshow img.active {
     opacity: 1;
   } */
+
+
+  @media (max-width: 1150px) {
+    #piedavajumi .box .fotos {
+        display: block;
+    }
+
+    #piedavajumi .box .fotos img,
+    #piedavajumi .box .fotos iframe {
+        width: 100%; 
+        margin-bottom: 1rem; 
+    }
+}
