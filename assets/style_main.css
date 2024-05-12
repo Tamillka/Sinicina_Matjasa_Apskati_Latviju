@@ -3,8 +3,9 @@
 
 :root{
     --maincolor: #f99f38;
-    --border: .1rem solid rgba(0,0,0,10%);
+    --border: .1rem solid rgba(56, 55, 54, 0.1);
     --box-shadow: 0 .5rem 1rem #f99f38;
+    --shadow: .3rem .2rem .5rem #d7cdbc;
     --radius: .5rem;
     --text: #292929;
     --bg: #ffe4c6;
@@ -31,6 +32,11 @@
     box-shadow: var(--box-shadow);
     position: relative;
     z-index: 1;
+    font-weight: bold;
+}
+
+.box{
+    box-shadow: var(--shadow);
 }
 
  section{
@@ -43,7 +49,7 @@
 }
 .box-container1{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 1.5rem;
 }
 h1{
@@ -84,7 +90,7 @@ header img{
 }
 #parmums .welcom {
     position: absolute;
-    top: 40%;
+    top: 35%;
     margin-left: 9%;
     color: #ddd;
     z-index: 1;
@@ -103,32 +109,42 @@ header img{
 }
 
 .welcom{
-    width: 46rem;
+    width: 48rem;
     background: rgba(0,0,0,30%);
     padding: 1.5rem;
     border-radius: var(--radius);
 }
 
 .welcom p{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     line-height: 1.75;
     color: #eee;
 }
 
 .welcom h1{
     text-align:left;
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     margin: .6rem 0 1.3rem 0;
     padding-right: 2rem;
 }
 
+.welcom .btn{
+    box-shadow: var(--shadow);
+    margin-top: 1.5rem;
+    border: var(--border);
+}
 span{
     box-shadow: 8px 8px 8px -3px #f99f38;
 }
 
+#kontakti{
+    background: rgba(161, 91, 22, 0.1);
+    padding-top: 7.2rem;
+}
+
 #kontakti .icon{
     border-radius: var(--radius);
-    box-shadow: var(--box_shadow);
+    box-shadow: var(--shadow);
     border: var(--border);
     padding: 2rem;
     text-align: center;
@@ -198,33 +214,34 @@ form textarea{
 #piedavajumi .box{
     text-align: center;
     border: var(--border);
-    box-shadow: var(--box_shadow);
+    box-shadow: var(--shadow);
     border-radius: var(--radius);
-    padding: 2rem 2rem;
+    padding: 1.5rem;
+    /* width: 40rem; */
 }
 #piedavajumi .box .fotos{
     display: flex;
     gap: 1rem;
-    align-items: center;
-    justify-content: center;
     padding-bottom: 1rem;
+    width: 100%;
+    padding: 0;
 }
 #piedavajumi .box .fotos img{
-    width: 45%;
-    height: 25rem;
+    width: 60%;
+    height: 19rem;
 }
 #piedavajumi .box .fotos iframe{
-    width: 45%;
-    height: 25rem;
+    width: 40%;
+    height: 19rem;
 }
 #piedavajumi .box h2{
     color: var(--text);
-    font-size: 2.2rem;
+    font-size: 2rem;
     padding-bottom: 1.5rem;
 }
 #piedavajumi .box p{
     color: var(--text);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding-bottom: .5rem;
     line-height: 2;
 }
@@ -250,6 +267,31 @@ form textarea{
     opacity: 1;
   } */
 
+  footer{
+    padding: 1rem 0 2rem 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  footer .blocks{
+    margin: 1rem 9% 2rem 9%;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 8px 6px -6px #f99f38;
+    align-items: center;
+    gap: 2rem;
+  }
+  footer iframe{
+    height: 18rem;
+  }
+footer p{
+    text-align: center;
+    color: #eee;
+    font-size: 1.3rem;
+}
+  footer .blocks p{
+    line-height: 1.5;
+    text-align: left;
+  }
 
   @media (max-width: 1150px) {
     #piedavajumi .box .fotos {
