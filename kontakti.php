@@ -2,7 +2,6 @@
 require "header.php";
 ?>
 <section id="kontakti">
-    <div class="kontform">
     <h1><span>Kontakti</span></h1>
     <div class="box-container">
     <div class="icon">
@@ -32,8 +31,6 @@ require "header.php";
         </div>
         <textarea name="zinojums" placeholder="Tava ziņa" class="box" required></textarea>
         <button type="submit" class="btn" name="nosutit">Sazināties</button>
-    </form>
-   </div>
     </form>
    </div>
 </section>

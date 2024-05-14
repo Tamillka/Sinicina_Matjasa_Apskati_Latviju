@@ -8,7 +8,7 @@
     --shadow: .3rem .2rem .5rem #d7cdbc;
     --radius: .5rem;
     --text: #292929;
-    --bg: #ffe4c6;
+    --bg: #ffecd7f5;
 }
 *{
     font-family: 'Nunito', sans-serif;
@@ -23,8 +23,8 @@
 
 .btn{
     display: inline-block;
-    padding: .5rem 2.3rem;
-    font-size: 1.5rem;
+    padding: .5rem 1.5rem;
+    font-size: 1.3rem;
     cursor: pointer;
     color: var(--text);
     background: var(--maincolor);
@@ -83,6 +83,8 @@ nav a{
 nav a:hover{
     color: var(--maincolor);
 }
+
+
 header img{
     width: 7rem;
     height: 7rem;
@@ -141,14 +143,18 @@ span{
 }
 
 #kontakti{
-    padding-top: 7.2rem;
+    padding: 7.2rem 0 0 0;
 }
 
+#kontakti .box-container{
+    background: #ffecd7f5;
+    padding: 2rem 9%;
+}
 #kontakti .icon{
-    border-radius: var(--radius);
+    /* border-radius: var(--radius);
     box-shadow: var(--shadow);
-    border: var(--border);
-    padding: 2rem;
+    border: var(--border); */
+    padding: 1rem 2rem;
     text-align: center;
 }
 
@@ -171,22 +177,23 @@ span{
     width: 6rem;
     height: 6rem;
     font-size: 2.5rem;
-    color: var(--maincolor);
-    background: var(--bg);
+    color: #eee;
+    background: var(--maincolor);
     border-radius: .4rem 2rem 1.3rem 2rem;
     line-height: 6rem;
 }
 
 #kontakti .row{
-    margin-top: 2rem;
+    padding: 2rem 9% 3rem 9%;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+    background-color: #fcf2e5;
 }
-.container{
-    display: flex;
-    gap: 1.5rem;
-    height: 5.5rem;
+
+#kontakti .row .box-container{
+    background-color: #fcf2e5;
+    padding: 0;
 }
 
 #kontakti form{
