@@ -16,13 +16,53 @@ require "header.php";
     </div>
 </section>
 
+<section id="jaunumi">
+    <h1><span>Jaunāki piedāvājumi</span></h1>
+    <div class="box-container1">
+     <?php
+        require "assets/connect_db.php";
+
+        $piedavajumiSQL = "SELECT * FROM apskati_piedavajumi ORDER BY Piev_Datums DESC LIMIT 4";
+        $atlasaPiedavajumi = mysqli_query($savienojums, $piedavajumiSQL);
+
+        if(mysqli_num_rows($atlasaPiedavajumi) > 0){
+            while($piedavajums = mysqli_fetch_assoc($atlasaPiedavajumi)){
+                echo"
+                <div class='box'>
+                <h2>{$piedavajums['Nosaukums']}</h2>
+                <div class='fotos'>
+                <img src='{$piedavajums['Attels']}'>
+                <iframe src={$piedavajums['Karte']}></iframe>
+                </div>
+                <p>{$piedavajums['Apraksts']}</p>
+                <div class='kontaktiP'>
+                <p>Tālr: {$piedavajums['Talrunis']} </p>
+                <p>E-pasts: {$piedavajums['Epasts']}</p>
+                
+                </div>
+                <p>Cena: no {$piedavajums['Cena']} eur</p>
+                
+                   <form action = 'pieteikums.php' method='post'>
+                   <button type='submit' class='btn' name='pieteikties' value='{$piedavajums['Nosaukums']}'>Pieteikties</button>
+                   </form>
+                </div>
+                ";
+            }
+
+        }else{
+            echo "Nav nevienu aktuālu piedāvājumu";
+        }
+        ?>
+     </div>
+</section>
+
 <section id="piedavajumi">
     <h1><span>Visi piedāvājumi</span></h1>
      <div class="box-container1">
      <?php
         require "assets/connect_db.php";
 
-        $piedavajumiSQL = "SELECT * FROM apskati_piedavajumi";
+        $piedavajumiSQL = "SELECT * FROM apskati_piedavajumi ORDER BY Piev_Datums DESC LIMIT 15 OFFSET 4";
         $atlasaPiedavajumi = mysqli_query($savienojums, $piedavajumiSQL);
 
         if(mysqli_num_rows($atlasaPiedavajumi) > 0){
@@ -44,7 +84,7 @@ require "header.php";
             }
 
         }else{
-            echo "Nav nevienas aktuālas cpeciālitātes";
+            echo "Nav nevienu piedāvājumu";
         }
         ?>
      </div>

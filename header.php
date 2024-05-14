@@ -10,11 +10,12 @@
 </head>
 <body>
 <header>
-        <a href="#" class="logo"><img src="images/latvia.png" alt=""></a>
+<a href="./"  class="logo"><img src="images/latvia.png" alt=""></a>
         <nav class="navbar">
-            <a href="#parmums">Par mums</a>
-            <a href="#jaunumi">Aktualitātes</a>
-            <a href="#piedavajumi">Piedāvājumi</a>       
-            <a href="kontakti.php">Kontakti</a> 
+            <a href="./index.php#parmums">Par mums</a>
+            <a href="./index.php#jaunumi">Aktualitātes</a>
+            <a href="./index.php#piedavajumi">Piedāvājumi</a>       
+            <a href="kontakti.php" >Kontakti</a> 
         </nav>
+        <a href="login.php" class="btn log">Ielogoties</a></div>
     </header>
