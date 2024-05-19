@@ -2,43 +2,13 @@
 require "header.php";
 ?>
 
-    <section id="parmums">
-    <div class="welcom">
-    <p>Esat sveicināti</p>
-    <h1>Tūrisma aģentūrā <span>Apskati Latviju</span></h1>
-    <p>Izvēlies piemērotāko ceļojumu un apskati Latviju kopā ar mums!</p>
-    <a href="#piedavajumi" class="btn">Apskati ceļojumus</a>
-</div>
-    <div class="video">
-        <video autoplay muted loop id="myVideo">
-            <source src=".\images\video.MP4">
-        </video>
-    </div>
-</section>
-
-<section>
-    <h1><span>Kas mēs esam?</span></h1>
-    <div class="main">
-        <div class="box1">
-
-        </div>
-        <img>
-    </div>
-</section>
-<section id="aktualitates">
-    <h1><span>Aktualitātes</span></h1>
-    <div class="box-aktualitates">
-     
-     </div>
-</section>
-
-<section id="piedavajumi">
+<section id="VisiPiedavajumi">
     <h1><span>Mūsu piedāvājumi</span></h1>
      <div class="box-container1">
      <?php
         require "assets/connect_db.php";
 
-        $piedavajumiSQL = "SELECT * FROM apskati_piedavajumi ORDER BY Piev_Datums DESC LIMIT  4";
+        $piedavajumiSQL = "SELECT * FROM apskati_piedavajumi ORDER BY Piev_Datums DESC ";
         $atlasaPiedavajumi = mysqli_query($savienojums, $piedavajumiSQL);
 
         if(mysqli_num_rows($atlasaPiedavajumi) > 0){
@@ -63,9 +33,10 @@ require "header.php";
         }
         ?>
      </div>
-     <a href="piedavajumi.php" class="btn vairak">Lasīt vairāk</a>
 </section>
+
 
 <?php 
 require "footer.php";
 ?>
+
