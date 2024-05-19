@@ -37,11 +37,13 @@
 .btn:hover{
     background-color: var(--bg);
 }
+
  .vairak{
     margin-top: 2rem;
     display: flex;
     justify-content: center;
 }
+
 
 .box{
     box-shadow: var(--shadow);
@@ -181,15 +183,14 @@ span{
     line-height: 6rem;
 }
 #kontakti .row{
-    margin-top: 2rem;
+    padding: 2rem 0;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
-.container{
-    display: flex;
-    gap: 1.5rem;
-    height: 5.5rem;
+
+#kontakti .row .box-container{
+    padding: 0;
 }
 #kontakti form{
     flex: 1 1 45rem;
@@ -204,6 +205,7 @@ form .box{
     border-radius: var(--radius);
     color: var(--text);
     background: rgba(161, 91, 22, 0.1);
+
 }
 form .box:focus{
     background: var(--bg);
@@ -213,14 +215,15 @@ form textarea{
     /* height: 4rem; */
 }
 
-#piedavajumi .box, #jaunumi .box, #VisiPiedavajumi .box, #jaunumi .box{
+
+#piedavajumi .box, #VisiPiedavajumi .box{
     text-align: center;
     border: var(--border);
     box-shadow: var(--shadow);
     border-radius: var(--radius);
     padding: 1.5rem;
-    /* width: 40rem; */
 }
+
 #piedavajumi .box .fotos, #VisiPiedavajumi .box .fotos{
     display: flex;
     gap: 1rem;
@@ -228,6 +231,7 @@ form textarea{
     width: 100%;
     padding: 0;
 }
+
 #piedavajumi .box .fotos img,  #VisiPiedavajumi .box .fotos img{
     width: 60%;
     height: 19rem;
@@ -241,6 +245,7 @@ form textarea{
     font-size: 2rem;
     padding-bottom: 1.5rem;
 }
+
 #piedavajumi .box p, #VisiPiedavajumi .box p{
     color: var(--text);
     font-size: 1.3rem;
@@ -268,6 +273,7 @@ form textarea{
   #slideshow img.active {
     opacity: 1;
   } */
+
   #VisiPiedavajumi{
         padding-top: 7.2rem;
   }
@@ -275,6 +281,7 @@ form textarea{
   footer{
     padding: 1rem 0 2rem 0;
     background: rgba(0, 0, 0, 0.7);
+
   }
   footer .blocks{
     margin: 1rem 9% 2rem 9%;
