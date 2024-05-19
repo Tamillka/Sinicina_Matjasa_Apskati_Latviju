@@ -1,4 +1,5 @@
 <?php 
+$page = "piedavajumi";
 require "header.php";
 ?>
 

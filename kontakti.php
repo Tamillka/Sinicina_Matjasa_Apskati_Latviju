@@ -1,4 +1,5 @@
 <?php 
+$page = "kontakti";
 require "header.php";
 ?>
 <section id="kontakti">

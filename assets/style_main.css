@@ -61,11 +61,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     gap: 1.5rem;
+    padding: 1.5rem 0;
 }
 h1{
     font-size: 3rem;
     text-align: center;
     margin: .6rem 0 1.7rem 0;
+
 }
 header{
     position: fixed;
@@ -79,12 +81,17 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 0 3%;
-    height: 6rem;
+    height: 6.2rem;
+}
+header .current{
+    font-weight: bold;
+    background: var(--bg);
 }
 nav a{
     font-size: 1.3rem;
-    margin-left: 2rem;
+    margin-left: 1.7rem;
     color: var(--text);
+    padding: 2.2rem .5rem;
 }
 
 nav a:hover{
@@ -97,10 +104,10 @@ header img{
     height: 7rem;
 }
 
-#parmums{ 
+#sak{ 
     padding: 6rem 0 0 0 ;
 }
-#parmums .welcom {
+#sak .welcom {
     position: absolute;
     top: 40%;
     margin-left: 9%;
@@ -149,6 +156,68 @@ span{
     box-shadow: 8px 8px 8px -3px #f99f38;
 }
 
+#parMums .main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+#parMums .main .box1{
+    width: 50%;
+
+}
+#parMums .main img{
+    height: 33rem;
+
+}
+
+#parMums .main .box1 h3{
+    font-size: 1.8rem;
+    font-weight: 1000;
+    color: #666;
+}
+#parMums .main .box1 h2{
+    margin: .5rem 0 2.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 1000;
+    color: var(--maincolor);
+}
+#parMums .main .box1 p{
+    font-size: 1.3rem;
+    color: var(--text);
+    line-height: 1.5;
+    padding-left: 2.5rem;
+    border-left: 5px solid var(--maincolor);
+}
+#parMums .boxicons{
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.7rem;
+}
+#parMums .iconbox{
+text-align: center;
+width: 9.4rem;
+}
+#parMums .iconbox i{
+    width: 7rem;
+    height: 7rem;
+    font-size: 4rem;
+    color: var(--maincolor);
+    background: var(--bg);
+    border-radius: 2.2rem .6rem 2.2rem 1.5rem;
+    line-height: 7rem;
+}
+#parMums .main .box1 .boxicons .iconbox p{
+    font-size: 1.3rem;
+    color: var(--text);
+    line-height: 1.5;
+    border-left: none;
+    padding: 0;
+    font-weight: bold;
+    color: #666;
+}
 #kontakti{
     padding-top: 7.2rem;
 }

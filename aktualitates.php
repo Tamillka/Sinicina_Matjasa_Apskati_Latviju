@@ -1,4 +1,5 @@
 <?php 
+$page = "aktualitates";
 require "header.php";
 ?>
 

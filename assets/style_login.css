@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300;600&display=swap');
 
-
 :root{
     --maincolor: #f99f38;
     --border: .1rem solid rgba(56, 55, 54, 0.1);
@@ -21,8 +20,8 @@
     transition: all .3s ease-out;
 }
 body{
-  
-  background-image: url("../images/admin.jpg");
+  background-image: url("../images/fons.jpg");
+  background-size: 100%;
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -45,7 +44,6 @@ body{
 .btn:hover{
     background-color: var(--bg);
 }
-
 .sakums{
   display: inline-block;
   padding: .5rem 2.3rem;
@@ -60,7 +58,6 @@ body{
   z-index: 1;
   font-weight: bold;
 }
-
 .input {
   font-size: 1.3rem;
   width: 100%;
@@ -71,8 +68,6 @@ body{
   border: 1px solid #ccc; 
   box-sizing: border-box; 
 }
-
-
 .box-container {
   position: absolute;
   top: 50%;
@@ -85,25 +80,17 @@ body{
   align-items: center;
   border-radius: 1rem;
   background-color: rgba(255, 255, 255, 0.2);
-  
-
 }
-
 .box {
-  
   padding: 2rem 2.7rem;
   width: 100%;
   height: 100%;
   text-align: center;
 }
-
 h2 {
   margin: 2rem 0;
   font-size: 2.7rem;
 }
-
-
-
 a{
   margin-top: 1rem;
   font-size: 1.2rem;
