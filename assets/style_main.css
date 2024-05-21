@@ -37,7 +37,7 @@
 .btn2{
     display: inline-block;
     padding: .5rem 1.3rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     cursor: pointer;
     color: var(--text);
     border: 2px solid var(--maincolor);
@@ -313,16 +313,9 @@ form textarea{
     width: 100%;
 }
 
-#piedavajumi .box a{
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #666;
-    padding: 60% 0;
-    vertical-align: middle;
-
-}
-#piedavajumi .box a:hover{
-    color: var(--text);
+#piedavajumi a{
+    margin: 2rem 0 1rem 0;
+    left: 45%;
 }
 #piedavajumi .box h2{
   font-size: 1.6rem;
