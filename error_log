@@ -508,3 +508,19 @@
 [14-May-2024 14:05:40 Europe/Riga] PHP Fatal error:  require(): Failed opening required 'assets/mail.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/kontakti.php on line 36
 [14-May-2024 14:06:06 Europe/Riga] PHP Warning:  require(assets/mail.php): failed to open stream: No such file or directory in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/kontakti.php on line 36
 [14-May-2024 14:06:06 Europe/Riga] PHP Fatal error:  require(): Failed opening required 'assets/mail.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/kontakti.php on line 36
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 26
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 27
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 26
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 27
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 26
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 27
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 26
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 27
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 26
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 27
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 26
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 27
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 26
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 27
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 26
+[20-May-2024 17:31:22 Europe/Riga] PHP Notice:  Undefined variable: nosaukumsId in /home2/grobina1/public_html/3pt2/matjasa/Sinicina_Matjasa_ApskatiLatviju/piedavajumi.php on line 27

@@ -18,7 +18,7 @@
     text-decoration: none;
     border: 0;
     outline: none;
-    transition: all .3s ease-out;
+    transition: all 1s ease-out;
 }
 
 .btn{
@@ -34,7 +34,20 @@
     z-index: 1;
     font-weight: bold;
 }
-.btn:hover{
+.btn2{
+    display: inline-block;
+    padding: .5rem 1.3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text);
+    border: 2px solid var(--maincolor);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+    background: #fff;
+}
+.btn:hover, .btn2:hover{
     background-color: var(--bg);
 }
 
@@ -47,6 +60,7 @@
 
 .box{
     box-shadow: var(--shadow);
+    background-color: #fff;
 }
 
  section{
@@ -61,11 +75,19 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     gap: 1.5rem;
+    padding: 1.5rem 0;
 }
+.box-container2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+}
+
 h1{
     font-size: 3rem;
     text-align: center;
     margin: .6rem 0 1.7rem 0;
+
 }
 header{
     position: fixed;
@@ -79,12 +101,17 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 0 3%;
-    height: 6rem;
+    height: 6.2rem;
+}
+header .current{
+    font-weight: bold;
+    background: var(--bg);
 }
 nav a{
     font-size: 1.3rem;
-    margin-left: 2rem;
+    margin-left: 1.7rem;
     color: var(--text);
+    padding: 2.2rem .5rem;
 }
 
 nav a:hover{
@@ -97,10 +124,10 @@ header img{
     height: 7rem;
 }
 
-#parmums{ 
+#sak{ 
     padding: 6rem 0 0 0 ;
 }
-#parmums .welcom {
+#sak .welcom {
     position: absolute;
     top: 40%;
     margin-left: 9%;
@@ -149,6 +176,68 @@ span{
     box-shadow: 8px 8px 8px -3px #f99f38;
 }
 
+#parMums .main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+#parMums .main .box1{
+    width: 50%;
+
+}
+#parMums .main img{
+    height: 33rem;
+
+}
+
+#parMums .main .box1 h3{
+    font-size: 1.8rem;
+    font-weight: 1000;
+    color: #666;
+}
+#parMums .main .box1 h2{
+    margin: .5rem 0 2.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 1000;
+    color: var(--maincolor);
+}
+#parMums .main .box1 p{
+    font-size: 1.3rem;
+    color: var(--text);
+    line-height: 1.5;
+    padding-left: 2.5rem;
+    border-left: 5px solid var(--maincolor);
+}
+#parMums .boxicons{
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.7rem;
+}
+#parMums .iconbox{
+text-align: center;
+width: 9.4rem;
+}
+#parMums .iconbox i{
+    width: 7rem;
+    height: 7rem;
+    font-size: 4rem;
+    color: var(--maincolor);
+    background: var(--bg);
+    border-radius: 2.2rem .6rem 2.2rem 1.5rem;
+    line-height: 7rem;
+}
+#parMums .main .box1 .boxicons .iconbox p{
+    font-size: 1.3rem;
+    color: var(--text);
+    line-height: 1.5;
+    border-left: none;
+    padding: 0;
+    font-weight: bold;
+    color: #666;
+}
 #kontakti{
     padding-top: 7.2rem;
 }
@@ -212,11 +301,36 @@ form .box:focus{
 }
 form textarea{
     resize: none;
-    /* height: 4rem; */
 }
 
+#piedvajumi .box{
+    border: var(--border);
+    padding: 0;
+}
 
-#piedavajumi .box, #VisiPiedavajumi .box{
+#piedavajumi .box img{
+    height: 20rem;
+    width: 100%;
+}
+
+#piedavajumi .box a{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #666;
+    padding: 60% 0;
+    vertical-align: middle;
+
+}
+#piedavajumi .box a:hover{
+    color: var(--text);
+}
+#piedavajumi .box h2{
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 2rem 0 2rem 2rem;
+}
+
+#VisiPiedavajumi .box{
     text-align: center;
     border: var(--border);
     box-shadow: var(--shadow);
@@ -224,7 +338,7 @@ form textarea{
     padding: 1.5rem;
 }
 
-#piedavajumi .box .fotos, #VisiPiedavajumi .box .fotos{
+#VisiPiedavajumi .box .fotos{
     display: flex;
     gap: 1rem;
     padding-bottom: 1rem;
@@ -232,21 +346,21 @@ form textarea{
     padding: 0;
 }
 
-#piedavajumi .box .fotos img,  #VisiPiedavajumi .box .fotos img{
+ #VisiPiedavajumi .box .fotos img{
     width: 60%;
     height: 19rem;
 }
-#piedavajumi .box .fotos iframe, #VisiPiedavajumi .box .fotos iframe{
+#VisiPiedavajumi .box .fotos iframe{
     width: 40%;
     height: 19rem;
 }
-#piedavajumi .box h2, #VisiPiedavajumi .box h2{
+#VisiPiedavajumi .box h2{
     color: var(--text);
     font-size: 2rem;
     padding-bottom: 1.5rem;
 }
 
-#piedavajumi .box p, #VisiPiedavajumi .box p{
+ #VisiPiedavajumi .box p{
     color: var(--text);
     font-size: 1.3rem;
     padding-bottom: .5rem;

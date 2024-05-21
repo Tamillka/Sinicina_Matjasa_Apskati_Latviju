@@ -1,4 +1,5 @@
 <?php 
+$page = "piedavajumi";
 require "header.php";
 ?>
 
@@ -13,6 +14,7 @@ require "header.php";
 
         if(mysqli_num_rows($atlasaPiedavajumi) > 0){
             while($piedavajums = mysqli_fetch_assoc($atlasaPiedavajumi)){
+                $nosaukumsId = htmlspecialchars($piedavajums['Nosaukums'], ENT_QUOTES);
                 echo"
                 <div class='box'>
                 <h2>{$piedavajums['Nosaukums']}</h2>
@@ -22,6 +24,11 @@ require "header.php";
                 </div>
                 <p>{$piedavajums['Apraksts']}</p>
                 <p>Cena: no {$piedavajums['Cena']} eur</p>
+                <button type='button' class='btn2' onclick='toggleInfo(\"info-{$nosaukumsId}\")'>Skatīt vairāk</button>
+                <div id='info-{$nosaukumsId}' style='display: none;'>
+                    <p>Galapunkta tālrunis: <b>{$piedavajums['Talrunis']}</b></p>
+                    <p>Galapunkta e-pasts: <b>{$piedavajums['Epasts']}</b></p>
+                </div>
                    <form action = 'pieteikums.php' method='post'>
                    <button type='submit' class='btn' name='pieteikties' value='{$piedavajums['Nosaukums']}'>Pieteikties</button>
                    </form>
