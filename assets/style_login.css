@@ -91,6 +91,7 @@ a{
 form :focus{
   background: rgba(255, 255, 255, 0.4);
 }
+
 @media (max-width: 1400px){
   .box-container{
     width: 50%;

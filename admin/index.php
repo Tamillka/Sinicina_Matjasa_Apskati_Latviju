@@ -86,7 +86,7 @@ require "header.php";
     <div class="nosaukums"><span>Pieteikumu skaits:</span></div>
 <table class="adminTable">
                 <tr>
-                    <th>Specialitāte</th>
+                    <th>Maršruta galapunkts</th>
                     <th>Pieteikumi kopā</th>
                 </tr>
                 <tr>
@@ -110,7 +110,7 @@ require "header.php";
                     <td>4</td>
                 </tr>
             </table>
-            <div class="nosaukums"><span>Pieteikumu skaits:</span></div>
+            <div class="nosaukums"><span> skaits:</span></div>
 <table class="adminTable">
                 <tr>
                     <th>Specialitāte</th>

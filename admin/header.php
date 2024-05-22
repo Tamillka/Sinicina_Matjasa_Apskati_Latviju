@@ -20,7 +20,7 @@
         <aside>
         <div class="user">
             <i class="fas fa-user"></i>
-        <p class="logout">lietotājvards<a href="logout.php">
+        <p class="logout">lietotājvards<a href="../login.php">
             <?php echo $_SESSION['lietotajvardsTAM']." "; ?>
                  <i class = "fas fa-power-off"></i></a></p>
                 </div>
@@ -31,7 +31,7 @@
             <a href="piedavajumi.php">Piedāvājumi</a>
             <a href="administratori.php">Administratori</a>
             <a href="moderatori.php">Moderatori</a>      
-            <a href="./admin/login.php" class="btn log"><i class="fas fa-sign-out-alt"></i> Uz galveno lapu</a> 
+            <a href="../index.php" class="btn log"><i class="fas fa-sign-out-alt"></i> Uz galveno lapu</a> 
         </nav>
        
         

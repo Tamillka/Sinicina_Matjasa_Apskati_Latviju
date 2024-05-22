@@ -117,7 +117,11 @@ nav a:hover{
 }
 .info-box{
     width: 17rem;
-   
+    transition: transform .5s ease;
+}
+
+.info-box:hover{
+    transform: translateY(-1rem);
 }
 
 .box1 {
@@ -226,6 +230,16 @@ nav a:hover{
     background: var(--bg); 
 }
 
+.adminTable i{
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    color: var(--maincolor);
+    background: var(--bg);
+    border-radius: .5rem;
+    line-height: 6rem;
+}
+
 footer{
     padding: 1rem 0 2rem 0;
     background: rgba(0, 0, 0, 0.7);
@@ -236,4 +250,6 @@ footer{
     text-align: center;
     color: #eee;
     font-size: 1.3rem;
+    width: 100%;
+    padding-left: -40rem; 
 }
