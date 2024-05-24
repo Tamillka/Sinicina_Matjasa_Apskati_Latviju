@@ -1,12 +1,13 @@
 <?php 
 require "header.php";
+$page = "sakums";
 ?>
 
 
 
 <div class="admin">
 <div class="skaiti">
-<div class="info-box">
+<div class="info-box animate">
 <div class="box1">
         <div class="info">
             <h2>4</h2>
@@ -17,11 +18,11 @@ require "header.php";
         </div>
     </div>
     <div class="box2">
-        <a href="">Skatīties vairāk  <i class="fas fa-arrow-right"></i></a>
+        <a href="pieteikumi.php">Skatīties vairāk  <i class="fas fa-arrow-right"></i></a>
     </div>
     
 </div>
-<div class="info-box">
+<div class="info-box animate">
 <div class="box1">
         <div class="info">
             <h2>4</h2>
@@ -32,11 +33,11 @@ require "header.php";
         </div>
     </div>
     <div class="box2">
-        <a href="">Skatīties vairāk  <i class="fas fa-arrow-right"></i></a>
+        <a href="aktualitates.php">Skatīties vairāk  <i class="fas fa-arrow-right"></i></a>
     </div>
     
 </div>
-<div class="info-box">
+<div class="info-box animate">
 <div class="box1">
         <div class="info">
             <h2>4</h2>
@@ -47,11 +48,11 @@ require "header.php";
         </div>
     </div>
     <div class="box2">
-        <a href="">Skatīties vairāk  <i class="fas fa-arrow-right"></i></a>
+        <a href="piedavajumi.php">Skatīties vairāk  <i class="fas fa-arrow-right"></i></a>
     </div>
     
 </div>
-<div class="info-box">
+<div class="info-box animate">
 <div class="box1">
         <div class="info">
             <h2>4</h2>
@@ -62,11 +63,11 @@ require "header.php";
         </div>
     </div>
     <div class="box2">
-        <a href="">Skatīties vairāk  <i class="fas fa-arrow-right"></i></a>
+        <a href="administratori.php">Skatīties vairāk  <i class="fas fa-arrow-right"></i></a>
     </div>
     
 </div>
-<div class="info-box">
+<div class="info-box animate">
 <div class="box1">
         <div class="info">
             <h2>4</h2>
@@ -77,7 +78,7 @@ require "header.php";
         </div>
     </div>
     <div class="box2">
-        <a href="">Skatīties vairāk  <i class="fas fa-arrow-right"></i></a>
+        <a href="moderatori.php">Skatīties vairāk  <i class="fas fa-arrow-right"></i></a>
     </div>
 </div>
 </div>
@@ -86,7 +87,7 @@ require "header.php";
     <div class="nosaukums"><span>Pieteikumu skaits:</span></div>
 <table class="adminTable">
                 <tr>
-                    <th>Specialitāte</th>
+                    <th>Maršruta galapunkts</th>
                     <th>Pieteikumi kopā</th>
                 </tr>
                 <tr>
@@ -110,7 +111,7 @@ require "header.php";
                     <td>4</td>
                 </tr>
             </table>
-            <div class="nosaukums"><span>Pieteikumu skaits:</span></div>
+            <div class="nosaukums"><span> skaits:</span></div>
 <table class="adminTable">
                 <tr>
                     <th>Specialitāte</th>

@@ -23,7 +23,7 @@
 }
 body{
     background: #fff;
-    padding-left: 25rem;
+    padding-top: 5rem;
 }
 
 .btn{
@@ -32,6 +32,27 @@ body{
     background: var(--bg2);
     border: 2px solid var(--bg);
 }
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+}
+a.btn.piev{
+    width: 97%;
+    height: 1.5rem;
+    margin-bottom: 5rem;
+    color: var(--text);
+    padding: 1.2rem;
+    background: var(--bg2);
+    border: .7rem;
+}
+a.btn.piev:hover{
+    background-color: #f9d1a6;
+}
+
 aside .user{
     padding: 1.5rem 1rem;
     text-align: center;
@@ -41,6 +62,11 @@ aside .user{
     padding: .5rem 0;
     font-size: 1.3rem;
 }
+.logout a{
+    display: inline-block;
+    background: none;
+    padding: 0;
+}
 .logout i{
     padding: 0 .5rem;
     color: var(--text);
@@ -49,6 +75,12 @@ aside .user{
 
 .logout i:hover{
     color: var(--maincolor);
+}
+
+.aside .current {
+    background: var(--bg);
+    letter-spacing: .1rem;
+    font-weight: bold;
 }
 
 .user .fa-user{
@@ -98,15 +130,23 @@ nav a:hover{
 
 /*admin*/
 
-
+.tabulas .piev{
+    font-size: 1.1rem;
+}
+.tabulas .piev:hover{
+    font-weight: bold;
+     background: var(--bg);
+}
 .admin{
     display: flex;
     flex-direction: row-reverse; 
-    margin-top: 3rem;
     margin-bottom: 5rem;
 }
 .tabulas{
-    margin-left: 2rem;
+    margin-left: 25%;
+}
+button{
+    background: #fff;
 }
 
 .skaiti{
@@ -117,7 +157,11 @@ nav a:hover{
 }
 .info-box{
     width: 17rem;
-   
+    transition: transform .5s ease;
+}
+
+.info-box:hover{
+    transform: translateY(-1rem);
 }
 
 .box1 {
@@ -184,8 +228,8 @@ nav a:hover{
 
 .adminTable{
     color: var(--text);
-    font-size: 1rem;
-    width: 90%;
+    font-size: 1.1rem;
+    width: 97%;
     table-layout: fixed;
     border-collapse: collapse;
     text-align: center;
@@ -210,13 +254,25 @@ nav a:hover{
 .adminTable .epasts{
     width: 20%;
 }
+.tabulas .adminTable input, .tabulas .adminTable textarea{
+    padding: 1rem;
+    background: var(--bg2);
+    border: none;
+    border-radius: var(--radius);
+    width: 80%;
+    font-size: 1.2rem;
+}
+
+.tabulas input:focus, .tabulas textarea:focus{
+    background-color: var(--bg);
+}
 
 .nosaukums span {
     font-weight: bold; 
 }
 
 .nosaukums{
-    width: 90%;
+    width: 97%;
     color: var(--text);
     text-align: center;
     padding: 1rem;
@@ -226,9 +282,42 @@ nav a:hover{
     background: var(--bg); 
 }
 
+.adminTable i{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    color: var(--maincolor);
+    background: var(--bg);
+    border-radius: 1rem;
+}
+.adminTable a{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.adminTable i:hover{
+    background-color: var(--bg2);
+    color: var(--bg);
+}
+.iesniegts{
+    color: red;
+    font-weight: bold;
+}
+.apstiprinats{
+    color: #37d000;
+    font-weight: bold;
+}
+
 footer{
     padding: 1rem 0 2rem 0;
     background: rgba(0, 0, 0, 0.7);
+    margin-left: 20%;
 
   }
 
@@ -236,4 +325,172 @@ footer{
     text-align: center;
     color: #eee;
     font-size: 1.3rem;
+    width: 100%;
+    padding-left: -40rem; 
+}
+
+
+/* Animācijas definīcija */
+@keyframes slideInUp {
+    from {
+        transform: translateY(15%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Klase animācijai */
+.animate {
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    will-change: opacity, transform;
+}
+
+.animate.visible {
+    animation: slideInUp 0.6s forwards;
+}
+
+
+/* Default styles for larger screens */
+.aside {
+    display: block; /* Show the aside by default on larger screens */
+}
+
+#menu-btn {
+    display: none; /* Hide the menu button by default */
+}
+
+
+@media (max-width: 1200px){
+    .adminTable{
+        font-size: .7rem;
+    }
+}
+
+
+@media(max-width: 1180px) {
+    body{
+        padding-left: 0;
+    }
+    .aside {
+        display: none; /* Hide the aside by default on smaller screens */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    
+    .aside.active {
+        display: block; /* Show the aside when active */
+    }
+
+    #menu-btn {
+        display: block; /* Show the menu button on smaller screens */
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .tabulas{
+        margin-left: 2rem ;
+    }
+    footer{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 950px){
+    .admin{
+        margin-top: 0;
+        
+    }
+    .info-box{
+        width: 9rem;
+        margin: 0 .4rem;
+    }
+    .box1{
+        padding: .3rem;
+        height: 5rem;
+    }
+    .info h2 {
+        font-size: 1.3rem;
+        
+    }
+    .info h3 {
+        font-size: .7rem;
+        padding-top: .3rem;
+    }
+    .box2{
+        width: 9rem;
+    }
+    .icona{
+        font-size: 2rem;
+    }
+    .adminTable th, .adminTable td{
+        font-size: .7rem;
+    }
+    .nosaukums{
+        font-size: 1rem;
+    }
+    footer p{
+        font-size: 1.1rem;
+    }
+    textarea, input{
+        margin: 2% 1.5rem;
+    }
+    .piev{
+        margin: 2%;
+    }
+}
+
+@media (max-width: 700px){
+    .box1{
+        width: 7rem;
+    }
+    .icona{
+        font-size: 1.5rem;
+    }
+    .box2{
+        width: 7rem;
+    }
+    .box2 a{
+        font-size: .8rem;
+    }
+    .info h3 {
+        font-size: .6rem;
+        
+    }
+    .skaiti{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+        gap: 1rem;
+        margin-bottom: 2.2rem;
+        margin-left: 2rem;
+    }
+    .admin{
+    display: flex;
+    flex-direction: column;
+    }
+    .adminTable i{
+    width: 1rem;
+    height: 1rem;
+    font-size: .6rem;
+    }
+    .adminTable th, .adminTable td{
+        font-size: .9rem;
+       padding: 0;
+    }
+    .nosaukums{
+        font-size: 1.3rem;
+    }
+
 }

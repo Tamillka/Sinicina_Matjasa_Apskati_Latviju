@@ -13,10 +13,15 @@
 <header>
 <a href="./" class="logo"><img src="images/latvia.png" alt=""></a>
         <nav class="navbar">
+            <div class="navigacija">
             <a href="index.php" class="<?php echo ($page == 'galvena' ? 'current' : ''); ?>">Sākumlapa</a>
             <a href="aktualitates.php" class="<?php echo ($page == 'aktualitates' ? 'current' : ''); ?>">Aktualitātes</a>
             <a href="piedavajumi.php" class="<?php echo ($page == 'piedavajumi' ? 'current' : ''); ?>">Piedāvājumi</a>       
             <a href="kontakti.php" class="<?php echo ($page == 'kontakti' ? 'current' : ''); ?>">Kontakti</a> 
+            </div>
+            <div class="button"><a href="login.php" class="btn log">Ielogoties</a></div>
+
         </nav>
-        <a href="login.php" class="btn log">Ielogoties</a></div>
+        
+        <div id="menu-btn" class="fas fa-bars"></div>
     </header>

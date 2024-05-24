@@ -3,7 +3,7 @@ $page = "piedavajumi";
 require "header.php";
 ?>
 
-<section id="VisiPiedavajumi">
+<section id="VisiPiedavajumi" class="animate">
     <h1><span>Mūsu piedāvājumi</span></h1>
      <div class="box-container1">
      <?php
@@ -24,7 +24,7 @@ require "header.php";
                 </div>
                 <p>{$piedavajums['Apraksts']}</p>
                 <p>Cena: no {$piedavajums['Cena']} eur</p>
-                <button type='button' class='btn2' onclick='toggleInfo(\"info-{$nosaukumsId}\")'>Skatīt vairāk</button>
+                <button type='button' class='btn2' onclick='toggleInfo(\"info-{$nosaukumsId}\")'><span>Lasīt vairāk</span></button>
                 <div id='info-{$nosaukumsId}' style='display: none;'>
                     <p>Galapunkta tālrunis: <b>{$piedavajums['Talrunis']}</b></p>
                     <p>Galapunkta e-pasts: <b>{$piedavajums['Epasts']}</b></p>

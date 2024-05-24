@@ -1,5 +1,6 @@
 <?php 
 require "header.php";
+$page = "pieteikumi";
 ?>
 
 <div class="tabulas">
@@ -27,7 +28,7 @@ require "header.php";
                     <td>Rīga</td>
                     <td>21.05.2024</td>
                     <td>01.06.2024</td>
-                    <td>Iesniegts</td>
+                    <td class="iesniegts">Iesniegts</td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -39,7 +40,7 @@ require "header.php";
                     <td>Liepāja</td>
                     <td>09.05.2024</td>
                     <td>09.06.2024</td>
-                    <td>Apstiprināts</td>
+                    <td class="apstiprinats">Apstiprināts</td>
                 </tr>
 
             </table>

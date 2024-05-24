@@ -9,7 +9,6 @@ require "header.php";
        <i class="fas fa-phone"></i><br>
        <h3>Tālrunis</h3>
        <p>+371 67 777 111</p>
-       <p>+371 24 555 761</p>
     </div>
     <div class="icon">
        <i class="fas fa-envelope"></i><br>
@@ -19,7 +18,7 @@ require "header.php";
     <div class="icon">
        <i class="fas fa-map-marker-alt"></i><br>
        <h3>Adrese</h3>
-       <p>kakaja ta iela 37 <br> Liepāja, LV-4305, Latvija</p>
+       <p>Brīvības bulvāris 36<br> Rīga, LV-3709, Latvija</p>
     </div>
    </div>
 
