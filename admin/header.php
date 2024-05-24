@@ -10,7 +10,7 @@
 </head>
 <body>
 
-        <div class="aside animate">
+        <div class="aside">
         <h1>Administrēšana</h1>
         <aside>
         

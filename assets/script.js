@@ -38,6 +38,7 @@ function toggleInfo(id) {
 }
 
 
+
     let lastScrollTop = 7;
     const header = document.querySelector('header');
 
@@ -81,6 +82,7 @@ function toggleInfo(id) {
         });
     });
 
+
     let menu = document.querySelector('#menu-btn')
 let navbar = document.querySelector('nav')
 
@@ -101,3 +103,4 @@ x = () => {
     let alert = document.getElementById("pazinojums")
     alert.style.display = "none"
 }
+

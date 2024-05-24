@@ -4,6 +4,7 @@ $page = "aktualitates";
 ?>
 
 <div class="tabulas">
+
     <div class="nosaukums"><span>Aktualitātes:</span></div>
 <table class="adminTable">
                 <tr>

@@ -23,8 +23,10 @@ require "header.php";
         <div class="box1">
              <h3 class="animate">Par mums</h3>
              <h2 class="animate">Apskati Latviju</h2>
+
              <p class="animate">
 Mēs, tūrisma aģentūra "Apskati Latviju", jau vairākus gadus veidojam unikālus maršrutus un vadām aizraujošas ekskursijas pa Latviju. Ar mums jūsu ceļojums kļūs par neaizmirstamu piedzīvojumu, atklājot Latvijas kultūras un dabas skaistumu.</p>
+
              <div class="boxicons animate">
                 <div class="iconbox">
                 <i class="fas fa-medal"></i>
@@ -40,7 +42,9 @@ Mēs, tūrisma aģentūra "Apskati Latviju", jau vairākus gadus veidojam unikā
                 </div>
              </div>
         </div>
+
         <img class="animate" src="images/icon.png">
+
     </div>
 </section>
 

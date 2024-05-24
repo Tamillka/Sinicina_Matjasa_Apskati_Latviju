@@ -8,6 +8,9 @@ $page = "moderatori";
            
             <table class="adminTable">
                 <form action="" method="POST">
+                <tr>  
+                        <th>* - obligāts lauks</th>
+                    </tr>
                     <tr>
                         <td class="tableValue" >
                             <input type="text" name="vards" placeholder="Ievadi vārdu*" required>
@@ -38,7 +41,6 @@ $page = "moderatori";
                             <input type="text" name="talrunis" placeholder="Ievadi tālruni*" required>
                         </td>
                     </tr>
-            
                     <tr>
                         <td>
                             <button class="btn piev" type="submit" name="rediget">Rediģēt</button>
