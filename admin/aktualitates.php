@@ -44,7 +44,8 @@ $page = "aktualitates";
                 </tr>
             </table>
             <a href="pievienot_akt.php" class="btn icon piev" name="edit"><i class="fa fa-plus-circle"></i></a>
-
+</div>
+</div>
 
 <?php 
 require "footer.php";

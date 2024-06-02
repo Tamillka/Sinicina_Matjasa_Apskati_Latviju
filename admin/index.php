@@ -1,6 +1,7 @@
 <?php 
 require "header.php";
 $page = "sakums";
+require "../assets/connect_db.php";
 ?>
 
 

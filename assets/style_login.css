@@ -95,6 +95,13 @@ body {
   background: rgba(255, 255, 255, 0.6);
 }
 
+.info{
+  color: #ff0000;
+  font-size: 1.3rem;
+  text-align: center;
+  padding-top: .5rem;
+  }
+  
 
 @media (max-width: 520px){
   .box{

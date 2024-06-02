@@ -1,3 +1,6 @@
+<?php
+require "assets/connect_db.php";
+?>
 <!DOCTYPE html>
 <html lang="lv">
 <head>
@@ -10,10 +13,16 @@
     <div class="box-container">
     <div class="box">   
         <h2>Ielogoties sistēmā</h2>
+        <div class="info">
+        <?php
+        // echo password_hash('ProbbA1212', PASSWORD_DEFAULT);
+                require "admin/login_operations.php";
+                ?>
+        </div>
         <form method="POST">
-        <input type="text" name="lietotajvards" placeholder="Lietotājvārds" class="input">
-         <input type="password" name="parole" placeholder="Parole" class="input">
-         <a href="admin/index.php" class="btn" name="ielogoties">IELOGOTIES</a> 
+        <input type="text" name="lietotajvards" placeholder="Lietotājvārds" class="input" required>
+         <input type="password" name="parole" placeholder="Parole" class="input" required>
+         <button class = "btn" name="ielogoties">IELOGOTIES</button> 
          <a href="index.php" class="btn sakums">Doties uz sākumlapu</a>
 </form>
         </div>

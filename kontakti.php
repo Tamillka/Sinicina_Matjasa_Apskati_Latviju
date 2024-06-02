@@ -31,6 +31,9 @@ require "header.php";
         </div>
         <textarea name="zinojums" placeholder="Tava ziņa" class="box" required></textarea>
         <button type="submit" class="btn" name="nosutit">Sazināties</button>
+        <?php
+        require 'assets/mail.php';
+        ?>
     </form>
    </div>
 </section>

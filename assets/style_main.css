@@ -575,27 +575,6 @@ form textarea{
     padding-bottom: .5rem;
     line-height: 2;
 }
-/* iframe{
-
-} */
-/* #slideshow {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    height: 50rem;
-  }
-
-  #slideshow img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-
-  #slideshow img.active {
-    opacity: 1;
-  } */
 
   #VisiPiedavajumi{
         padding-top: 7.2rem;
@@ -692,11 +671,28 @@ footer p{
     transform: none;
   }
   #pieteikums form input.box:hover, #pieteikums form select.box:hover{
-    transform: scale(1.05); /* Palielina izmēru par 5% */
-    transition: transform 0.3s ease; /* Pievieno pāreju, lai efekts būtu vienmērīgs */
+    transform: scale(1.05); 
+    transition: transform 0.3s ease;
   }
 
-/* Animācijas definīcija */
+  /* Pieteikšanās notifications */
+  .notif{
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 5rem;
+    padding: 3rem;
+    color: #eee;
+    border-radius: var(--radius);
+    border: var(--border);
+    background: var(--bg);
+}
+.notif.red{
+    background: #790808;
+}
+.notif.green{
+    background: #2c7715;
+}
+
 @keyframes slideInUp {
     from {
         transform: translateY(15%);
@@ -708,7 +704,6 @@ footer p{
     }
 }
 
-/* Klase animācijai */
 .animate {
     opacity: 0;
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
@@ -731,14 +726,14 @@ footer p{
     }
     #myVideo{
         .video {
-            width: 100vw; /* Full viewport width */
-            height: 100vh; /* Full viewport height */
+            width: 100vw; 
+            height: 100vh; 
         }
     
         .video video {
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            object-fit: cover; /* Ensure the video covers the entire container */
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
         }
     }
 }
@@ -850,6 +845,7 @@ footer p{
         }
 }
 @media(max-width: 650px){
+
     h1{
         font-size: 2.5rem;
     }
