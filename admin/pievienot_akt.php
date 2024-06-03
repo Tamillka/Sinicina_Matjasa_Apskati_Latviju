@@ -38,6 +38,27 @@ $page = "aktualitates";
                 </form>
             </table>
 
+            <?php
+          if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                if(isset($_POST['pievienot'])){
+                    require ("../assets/connect_db.php");
+
+                    $nosaukums_ievade = mysqli_real_escape_string($savienojums, $_POST['nosaukums']);
+                    $apraksts_ievade = mysqli_real_escape_string($savienojums, $_POST['apraksts']);
+                    $attels_ievade = mysqli_real_escape_string($savienojums, $_POST['attels']);
+
+                    $pievienot_SQL = "INSERT INTO apskati_aktualitates (Nosaukums, Apraksts, Attels) VALUES ('$nosaukums_ievade', '$apraksts_ievade', '$attels_ievade')";
+                    if(mysqli_query($savienojums, $pievienot_SQL)){
+                    echo "<div class='notif green'>Pievienots</div>";
+                    header("Refresh: 2, url=./aktualitates.php");
+                }else{
+                    echo "<div class='notif red'>Kļūda sistēmā!</div>";
+                    header("Refresh: 2, url=./aktualitates.php");
+                }
+            }       
+        }
+            ?>
+
           
 
 </section>

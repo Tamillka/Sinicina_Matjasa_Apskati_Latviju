@@ -8,7 +8,7 @@ require "header.php";
         <?php
             require "assets/connect_db.php";
 
-            $aktualitatesSQL = "SELECT * FROM apskati_aktualitates ORDER BY Piev_Datums";
+            $aktualitatesSQL = "SELECT * FROM apskati_aktualitates ORDER BY Piev_Datums desc";
             $atlasaAktualitates = mysqli_query($savienojums, $aktualitatesSQL);
 
             if(mysqli_num_rows($atlasaAktualitates) > 0){

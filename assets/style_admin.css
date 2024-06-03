@@ -169,6 +169,23 @@ nav a:hover{
 
 /*admin*/
 
+.notif{
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 1rem 5rem;
+    padding: 1rem;
+    color: #eee;
+    border-radius: var(--radius);
+    border: var(--border);
+    background: var(--text)
+}
+.notif.red{
+    background: #b11717;
+}
+.notif.green{
+    background: #4abb28;
+}
+
 .tabulas .piev{
     font-size: 1.1rem;
 }
@@ -304,6 +321,13 @@ button{
 
 .tabulas input:focus, .tabulas textarea:focus{
     background-color: var(--bg);
+}
+
+.adminTable img{
+width: 100%;
+}
+.adminTable .sauraSuna{
+    width: 7%;
 }
 
 .nosaukums span {
