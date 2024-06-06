@@ -6,6 +6,17 @@ if(!isset($_SESSION['lietotajvardsTAM'])){
     exit();
 }
 require "../assets/connect_db.php";
+
+// Check user status
+$lietotajvards = $_SESSION['lietotajvardsTAM'];
+$sql = "SELECT Liet_Stat FROM apskati_lietotaji WHERE Lietotajvards = '$lietotajvards'";
+$rezultats = mysqli_query($savienojums, $sql);
+$user = mysqli_fetch_assoc($rezultats);
+
+if ($user['Liet_Stat'] != 0 && basename($_SERVER['PHP_SELF']) == 'administratori.php') {
+    header("location:./");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -23,35 +34,33 @@ require "../assets/connect_db.php";
         <div class="aside">
         <h1>Administrēšana</h1>
         <aside>
-        
-        <nav class="navbar">
+    <nav class="navbar">
         <div class="user">
-        <i class="fas fa-user"></i>
-        <p class="logout">
-            <?php echo $_SESSION['lietotajvardsTAM'];?>
-            <a href="../login.php"><i class="fas fa-power-off"></i></a>
-        </p>
-        <button type="button" name="change" class="btn" onclick="toggleForm()">Mainīt paroli <i class="fas fa-caret-down"></i></button>
-        <div class="infoo">
-        <?php
-                require "login_operations.php";
-                ?> 
+            <i class="fas fa-user"></i>
+            <p class="logout">
+                <?php echo $_SESSION['lietotajvardsTAM'];?>
+                <a href="../login.php"><i class="fas fa-power-off"></i></a>
+            </p>
+            <button type="button" name="change" class="btn" onclick="toggleForm()">Mainīt paroli <i class="fas fa-caret-down"></i></button>
+            <div class="infoo">
+                <?php require "login_operations.php"; ?> 
+            </div>
+            <form method="POST" class="hidden" id="passwordForm">
+                <input type="password" name="currentpassword" placeholder="Pašreizējā parole" required>
+                <input type="password" name="jauna" placeholder="Jauna parole" required>
+                <input type="password" name="jaunaatkartoti" placeholder="Atkārtoti" required><br>
+                <button type="submit" name="change_password" class="btn">Saglabāt</button>
+            </form>
         </div>
-        <form method="POST" class="hidden" id="passwordForm">
-            <input type="password" name="currentpassword" placeholder="Pašreizējā parole" required>
-            <input type="password" name="jauna" placeholder="Jauna parole" required>
-            <input type="password" name="jaunaatkartoti" placeholder="Atkārtoti" required>
-            <button type="submit" name="change_password" class="btn">Saglabāt</button>
-        </form>
-    </div>
-            <a href="./" class="<?php echo ($page == 'sakums' ? 'current' : ''); ?>">Sākumlapa</a>
-            <a href="pieteikumi.php" class="<?php echo ($page == 'pieteikumi' ? 'current' : ''); ?>">Pieteikumi</a>
-            <a href="aktualitates.php" class="<?php echo ($page == 'aktualitates' ? 'current' : ''); ?>">Aktualitātes</a>
-            <a href="piedavajumi.php" class="<?php echo ($page == 'piedavajumi' ? 'current' : ''); ?>">Piedāvājumi</a>
+        <a href="./" class="<?php echo ($page == 'sakums' ? 'current' : ''); ?>">Sākumlapa</a>
+        <a href="pieteikumi.php" class="<?php echo ($page == 'pieteikumi' ? 'current' : ''); ?>">Pieteikumi</a>
+        <a href="aktualitates.php" class="<?php echo ($page == 'aktualitates' ? 'current' : ''); ?>">Aktualitātes</a>
+        <a href="piedavajumi.php" class="<?php echo ($page == 'piedavajumi' ? 'current' : ''); ?>">Piedāvājumi</a>
+        <?php if ($_SESSION['Liet_Stat'] == 0): ?>
             <a href="administratori.php" class="<?php echo ($page == 'administratori' ? 'current' : ''); ?>">Administratori</a>
-            <a href="moderatori.php" class="<?php echo ($page == 'moderatori' ? 'current' : ''); ?>">Moderatori</a>      
-            <a href="../index.php" class="btn log"><i class="fas fa-sign-out-alt"></i> Uz galveno lapu</a> 
-        </nav>    
+        <?php endif; ?>
+        <a href="../index.php" class="btn log"><i class="fas fa-sign-out-alt"></i> Uz galveno lapu</a>
+    </nav>    
 </aside>
 </div>
 <div id="menu-btn" class="fas fa-bars"></div>

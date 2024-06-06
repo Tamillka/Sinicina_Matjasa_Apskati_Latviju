@@ -25,7 +25,7 @@ $page = "aktualitates";
                 <td>{$aktualitate['Apraksts']}</td>
                 <td>
                     <form method='POST' action='rediget_akt.php'>
-                        <button type='submit' name='redigetAkt' value='{$aktualitate['Aktualitates_ID']}' class='btn icon'><i class='fas fa-edit'></i></button>
+                        <button type='submit' name='redigetAkt' value='{$aktualitate['Aktualitates_ID']}'><i class='fas fa-edit'></i></button>
                     </form>
                 </td>
                 <td>

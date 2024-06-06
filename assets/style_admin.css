@@ -294,6 +294,16 @@ button{
     margin-bottom: 2rem;
 }
 
+.epast{
+    font-size: .7rem;
+}
+.liela{
+    width: 100%;
+    font-size: .9rem;
+}
+.adminTable .small{
+    width: 9%;
+}
 
 .adminTable th, .adminTable td {
     border: var(--border); 
@@ -319,7 +329,7 @@ button{
     font-size: 1.2rem;
 }
 
-.tabulas input:focus, .tabulas textarea:focus{
+.tabulas input:focus, .tabulas textarea:focus, #pilseta:focus{
     background-color: var(--bg);
 }
 
@@ -328,6 +338,13 @@ width: 100%;
 }
 .adminTable .sauraSuna{
     width: 7%;
+}
+.adminTable .sauraSuna2{
+    width: 5%;
+}
+.adminTable iframe{
+    width: 100%;
+    height: 50%;
 }
 
 .nosaukums span {
@@ -343,6 +360,9 @@ width: 100%;
     font-weight: bold;
     border: var(--border);
     background: var(--bg); 
+}
+.liels{
+    width: 100%;
 }
 
 .adminTable i{
@@ -392,7 +412,25 @@ footer{
     padding-left: -40rem; 
 }
 
+#pilseta{
+    padding: 1rem;
+    background: var(--bg2);
+    border: none;
+    border-radius: var(--radius);
+    width: 30%;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
 
+#pilsetaa{
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+#pilsetaa label{
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1rem .2rem;
+}
 /* Animācijas definīcija */
 @keyframes slideInUp {
     from {

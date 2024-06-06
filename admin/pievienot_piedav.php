@@ -45,13 +45,13 @@ $page = "piedavajumi";
                     <tr>
                         <td>Galapunkta tālrunis:</td>
                         <td class="tableValue" id="plats">
-                            <input type="text" name="talrunis" placeholder="Ievadi tālruni*" required>
+                            <input type="text" name="talrunis" placeholder="Ievadi tālruni">
                         </td>
                     </tr>
                     <tr>
                         <td>Galapunkta e-pasts:</td>
                         <td class="tableValue" id="plats">
-                            <input type="text" name="epasts" placeholder="Ievadi e-pastu*" required>
+                            <input type="text" name="epasts" placeholder="Ievadi e-pastu">
                         </td>
                     </tr>
                     <tr>
@@ -62,7 +62,30 @@ $page = "piedavajumi";
                 </form>
             </table>
 
-          
+            <?php
+          if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                if(isset($_POST['pievienot'])){
+                    require ("../assets/connect_db.php");
+
+                    $nosaukums_ievade = mysqli_real_escape_string($savienojums, $_POST['nosaukums']);
+                    $apraksts_ievade = mysqli_real_escape_string($savienojums, $_POST['apraksts']);
+                    $attels_ievade = mysqli_real_escape_string($savienojums, $_POST['attels']);
+                    $karte_ievade = mysqli_real_escape_string($savienojums, $_POST['karte']);
+                    $cena_ievade = mysqli_real_escape_string($savienojums, $_POST['cena']);
+                    $talrunis_ievade = mysqli_real_escape_string($savienojums, $_POST['talrunis']);
+                    $epasts_ievade = mysqli_real_escape_string($savienojums, $_POST['epasts']);
+
+                    $pievienot_SQL = "INSERT INTO apskati_piedavajumi (Nosaukums, Apraksts, Attels, Karte, Cena, Talrunis, Epasts) VALUES ('$nosaukums_ievade', '$apraksts_ievade', '$attels_ievade', '$karte_ievade', '$cena_ievade', '$talrunis_ievade', '$epasts_ievade')";
+                    if(mysqli_query($savienojums, $pievienot_SQL)){
+                    echo "<div class='notif green'>Pievienots</div>";
+                    header("Refresh: 2, url=./piedavajumi.php");
+                }else{
+                    echo "<div class='notif red'>Kļūda sistēmā!</div>";
+                    header("Refresh: 2, url=./piedavajumi.php");
+                }
+            }       
+        }
+        ?>
 
 </section>
 

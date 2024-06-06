@@ -654,7 +654,7 @@ footer p{
     box-shadow: var(--shadow);
     text-align: center;
   }
-  #pieteikums form input, #pieteikums select{
+  #pieteikums form input, #pieteikums select, #datums{
     background: var(--bg);
     width: 100%;
   }
@@ -674,6 +674,12 @@ footer p{
     transform: scale(1.05); 
     transition: transform 0.3s ease;
   }
+  #pieteikums label{
+    font-size: 1.1rem;
+    text-align: left;
+    color:#666;
+  }
+  
 
   /* Pieteikšanās notifications */
   .notif{

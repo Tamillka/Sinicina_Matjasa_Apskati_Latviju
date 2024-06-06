@@ -15,14 +15,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $epasts_ievade = mysqli_real_escape_string($savienojums, $_POST['epasts']);
         $izveletais_ievade = mysqli_real_escape_string($savienojums, $_POST['izveletais']);
         $pilseta_ievade = mysqli_real_escape_string($savienojums, $_POST['pilseta']);
+        $datums_ievade = mysqli_real_escape_string($savienojums, $_POST['datums']);
         $komentars_ievade = mysqli_real_escape_string($savienojums, $_POST['komentars']);
 
         // Pārbauda, vai visi lauki ir aizpildīti
-        if($vards_ievade == "" || $uzvards_ievade == "" ||  $talrunis_ievade == "" || $epasts_ievade == "" || $izveletais_ievade == "" || $pilseta_ievade == "" ) { 
+        if($vards_ievade == "" || $uzvards_ievade == "" ||  $talrunis_ievade == "" || $epasts_ievade == "" || $izveletais_ievade == "" || $pilseta_ievade == "" || $datums_ievade == "") { 
             echo "<div class='notif red'>Nav aizpildīti visi obligātie lauki!</div>";
             header("Refresh: 2; url=./");
         } else {
-            $pieteikums_SQL = "INSERT INTO apskati_klienti (Vards, Uzvards, Talrunis, Epasts, Izv_Marsruts, Pilseta, Komentars) VALUES ('$vards_ievade', '$uzvards_ievade', '$talrunis_ievade', '$epasts_ievade', '$izveletais_ievade', '$pilseta_ievade', '$komentars_ievade')";
+            $pieteikums_SQL = "INSERT INTO apskati_klienti (Vards, Uzvards, Talrunis, Epasts, Izv_Marsruts, Pilseta, Cel_datums, Komentars) VALUES ('$vards_ievade', '$uzvards_ievade', '$talrunis_ievade', '$epasts_ievade', '$izveletais_ievade', '$pilseta_ievade', '$datums_ievade', '$komentars_ievade')";
             
             if(mysqli_query($savienojums, $pieteikums_SQL)){
                 echo "<div class='notif green'>Pieteikums pieņemts. Sazināsimies ar Jums vēlāk!</div>";
@@ -64,6 +65,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     }
                     ?>
                 </select>
+                <label>Ceļojuma datums</label>
+                 <input type="date" id="datums" name="datums" required>
                 <input type="text" name="komentars" placeholder="Komentārs" class="box">
             </div>
             <button type="submit" class="btn" name="iesniegt">Pieteikties</button>

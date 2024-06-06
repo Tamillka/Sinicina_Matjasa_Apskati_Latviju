@@ -15,7 +15,7 @@ require "assets/connect_db.php";
         <h2>Ielogoties sistēmā</h2>
         <div class="info">
         <?php
-        // echo password_hash('ProbbA1212', PASSWORD_DEFAULT);
+        // echo password_hash('Tami123', PASSWORD_DEFAULT);
                 require "admin/login_operations.php";
                 ?>
         </div>
