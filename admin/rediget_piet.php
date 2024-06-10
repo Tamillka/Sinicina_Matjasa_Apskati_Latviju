@@ -37,25 +37,25 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 <table class="adminTable">
     <tr>            
-        <td class="tableValue"><?php echo $pieteikums['Vards']?></td>
+        <td class="tableValue"><?php echo '<p><b>Vārds:</b> ' .$pieteikums['Vards']. '</p>'?></td>
     </tr>
     <tr>
-        <td class="tableValue"><?php echo $pieteikums['Uzvards']?></td>
+        <td class="tableValue"><?php echo '<p><b>Uzvārds:</b> ' .$pieteikums['Uzvards']. '</p>'?></td>
     </tr>
     <tr>
-        <td class="tableValue"><?php echo $pieteikums['Talrunis']?></td>
+        <td class="tableValue"><?php echo '<p><b>Tālrunis:</b> ' .$pieteikums['Talrunis']. '</p>'?></td>
     </tr>
     <tr>
-        <td class="tableValue"><?php echo $pieteikums['Epasts']?></td>
+        <td class="tableValue"><?php echo '<p><b>E-pasts:</b> ' .$pieteikums['Epasts']. '</p>'?></td>
     </tr>
     <tr>
-        <td class="tableValue"><?php echo $pieteikums['Izv_Marsruts']?></td>
+        <td class="tableValue"><?php echo '<p><b>Izvēlētais maršruts:</b> ' .$pieteikums['Izv_Marsruts']. '</p>'?></td>
     </tr>
     <tr>
-        <td class="tableValue"><?php echo $pieteikums['Cel_datums']?></td>
+        <td class="tableValue"><?php echo '<p><b>Ceļojuma izvēlētais datums:</b> ' .$pieteikums['Cel_datums']. '</p>'?></td>
     </tr>
     <tr>
-        <td class="tableValue"><?php echo $pieteikums['Piet_Datums']?></td>
+        <td class="tableValue"><?php echo '<p><b>Pieteikšanās datums:</b> ' . $pieteikums['Piet_Datums'] . '</p>'; ?></td>
     </tr>
     <tr>
         <td>

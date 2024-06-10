@@ -45,9 +45,9 @@ try {
     $mail->send();
     echo "<div id='pazinojums'>
     <p>Ziņa nosūtīta! Sazināsimies ar Jums kaut kad!!!
-    <a onclick='x()'><i class = 'fas fa-times'></i><a/>
     </p>
     </div>";
+    header("Refresh: 2; url=./kontakti.php");
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }

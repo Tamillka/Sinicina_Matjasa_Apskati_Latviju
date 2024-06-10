@@ -372,6 +372,11 @@ width: 9.4rem;
     flex: 1 1 45rem;
     width: 100%;
 }
+#kontakti form .box:hover{
+    transform: scale(1.03); 
+    transition: transform 0.3s ease;
+  }
+
 form .box{
     width: 100%;
     font-size: 1.6rem;
@@ -683,21 +688,62 @@ footer p{
 
   /* Pieteikšanās notifications */
   .notif{
-    font-size: 2rem;
+    font-size: 1.2rem;
     text-align: center;
     margin: 1rem 5rem;
-    padding: 3rem;
+    padding: 1rem;
     color: #eee;
     border-radius: var(--radius);
     border: var(--border);
-    background: var(--bg);
+    background: var(--text)
 }
 .notif.red{
-    background: #790808;
+    background: #b11717;
 }
 .notif.green{
-    background: #2c7715;
+    background: #4abb28;
 }
+
+
+#pazinojums{
+    margin-top: 1.5rem;
+    width: 40%;
+    text-align: center;
+    background: var(--bg);
+    box-shadow: var(--box-shadow);
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* display: block; */
+    padding: .8rem 1rem;
+}
+#pazinojums p{
+    animation: blinker 2s linear infinite;
+}
+ #pazinojums a{
+    cursor: pointer;
+    border: 2px solid #fff;
+    padding: .1rem .4rem;
+    font-weight: normal;
+} 
+
+#pazinojums a:hover{
+    color: rgb(107, 6, 6);
+    border: 3px solid #000;
+
+}
+
+.filtri select{
+    font-size: 1.2rem;
+}
+
+.filtri option{
+    width: 3rem;
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
 
 @keyframes slideInUp {
     from {

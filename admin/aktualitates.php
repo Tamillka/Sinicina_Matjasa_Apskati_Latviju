@@ -15,7 +15,7 @@ $page = "aktualitates";
             <th class="sauraSuna"></th>
         </tr>
         <?php 
-        $akt_SQL = "SELECT * FROM apskati_aktualitates ORDER BY Nosaukums";
+        $akt_SQL = "SELECT * FROM apskati_aktualitates ORDER BY Nosaukums DESC";
         $atlasa_akt_SQL = mysqli_query($savienojums, $akt_SQL);
         while($aktualitate = mysqli_fetch_array($atlasa_akt_SQL)){
             echo "

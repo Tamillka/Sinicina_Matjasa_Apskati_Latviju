@@ -205,6 +205,7 @@ button{
     background: #fff;
 }
 
+
 .skaiti{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(1fr, 15rem));
@@ -292,6 +293,9 @@ button{
     box-shadow: var(--shadow);
     border-radius: var(--radius);
     margin-bottom: 2rem;
+}
+select{
+    font-size: 1.1rem;
 }
 
 .epast{

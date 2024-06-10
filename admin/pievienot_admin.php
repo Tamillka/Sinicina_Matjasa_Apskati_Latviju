@@ -46,6 +46,11 @@ $page = "administratori";
                     $vards_ievade = mysqli_real_escape_string($savienojums, $_POST['vards']);
                     $lietotajv_ievade = mysqli_real_escape_string($savienojums, $_POST['lietotajvards']);
                     $parole_ievade = mysqli_real_escape_string($savienojums, $_POST['parole']);
+
+                    $existingUserQuery = "SELECT * FROM apskati_lietotaji WHERE Lietotajvards = '$lietotajv_ievade'";
+                    $existingUserResult = mysqli_query($savienojums, $existingUserQuery);
+
+                    if (mysqli_num_rows($existingUserResult) == 0) {
                     $hashedPassword = password_hash($parole_ievade, PASSWORD_DEFAULT);
     
                     $pievienot_SQL = "INSERT INTO apskati_lietotaji (Vards, Lietotajvards, Parole, Liet_Stat) VALUES ('$vards_ievade', '$lietotajv_ievade', '$hashedPassword', 0)";
@@ -55,6 +60,10 @@ $page = "administratori";
                     header("Refresh: 2, url=./administratori.php");
                 }else{
                     echo "<div class='notif red'>Kļūda sistēmā!</div>";
+                    header("Refresh: 2, url=./administratori.php");
+                }
+                }else{
+                    echo "<div class='notif red'>Šāds lietotājvārds ir reģistrēts!</div>";
                     header("Refresh: 2, url=./administratori.php");
                 }
             }       
