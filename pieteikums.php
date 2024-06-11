@@ -52,11 +52,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <form method="POST">
             <h2>Tu izvēlējies maršrutu <span><?php echo $pieteiktais_marsruts;?></span></h2>
             <div class="inputs">
-                <input type="text" name="vards" class="box" placeholder="Vārds" required>  
-                <input type="text" name="uzvards" class="box" placeholder="Uzvārds" required>
-                <input type="tel" name="talrunis" class="box" placeholder="Tālrunis" required>
-                <input type="email" name="epasts" class="box" placeholder="E-pasts" required> 
-                <input type="hidden" name="izveletais" class="box" value="<?php echo $pieteiktais_marsruts;?>" required>
+                <input type="text" name="vards" class="box" placeholder="Vārds" autocomplete="off" required>  
+                <input type="text" name="uzvards" class="box" placeholder="Uzvārds" autocomplete="off" required>
+                <input type="tel" name="talrunis" class="box" placeholder="Tālrunis" autocomplete="off" required>
+                <input type="email" name="epasts" class="box" placeholder="E-pasts" autocomplete="off" required> 
+                <input type="hidden" name="izveletais" class="box" value="<?php echo $pieteiktais_marsruts;?>" autocomplete="off" required>
                 <select name="pilseta" class="box" required>
                     <option value="">Izbraukšanas pilsēta</option>
                     <?php
@@ -66,8 +66,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     ?>
                 </select>
                 <label>Ceļojuma datums</label>
-                 <input type="date" id="datums" name="datums" required>
-                <input type="text" name="komentars" placeholder="Komentārs" class="box">
+                 <input type="date" id="datums" name="datums" class="box" required>
+
+    <script>
+
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('datums').setAttribute('min', today);
+
+    </script>
+                <input type="text" name="komentars" placeholder="Komentārs" class="box" autocomplete="off">
             </div>
             <button type="submit" class="btn" name="iesniegt">Pieteikties</button>
         </form>
@@ -75,8 +82,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <?php
     }
 } else {
-    echo "<div class='notif red'>Kaut kas nogāja greizi! Aqtgriezies sākumlapā, mēģini vēlreiz!</div>";
-    header("Refresh: 1; url=./");
+    echo "<div class='notif red'>Kaut kas nogāja greizi! Atgriezies sākumlapā, mēģini vēlreiz!</div>";
+    header("Refresh: 1; url=./piedavajumi.php");
 }
 ?>
 </section>

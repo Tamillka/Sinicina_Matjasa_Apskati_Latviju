@@ -15,43 +15,43 @@ $page = "piedavajumi";
                     <tr>
                         <td>Piedāvājums:</td>
                         <td class="tableValue" id="plats">
-                            <input type="text" name="nosaukums" placeholder="Ievadi piedāvājuma nosaukumu*" required>
+                            <input type="text" name="nosaukums" placeholder="Ievadi piedāvājuma nosaukumu*" autocomplete="off" required>
                         </td>
                     </tr>
                     <tr>
                         <td>Apraksts:</td>
                         <td class="tableValue apraksts" id="plats">
-                            <textarea name="apraksts" placeholder="Ievadi piedāvājuma aprakstu*" required></textarea>
+                            <textarea name="apraksts" placeholder="Ievadi piedāvājuma aprakstu*" autocomplete="off" required></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td>Attēls:</td>
                         <td class="tableValue" id="plats">
-                            <input type="text" name="attels" placeholder="Ievadi attēla URL*" required>
+                            <input type="text" name="attels" placeholder="Ievadi attēla URL*" autocomplete="off" required>
                         </td>
                     </tr>
                     <tr>
                         <td>Karte:</td>
                         <td class="tableValue" id="plats">
-                            <input type="text" name="karte" placeholder="Ievadi kartes kodu(saturs iekavās, bez tagiem)*" required>
+                            <input type="text" name="karte" placeholder="Ievadi kartes kodu(saturs iekavās, bez tagiem)*" autocomplete="off" required>
                         </td>
                     </tr>
                     <tr>
                         <td>Cena:</td>
                         <td class="tableValue" id="plats">
-                            <input type="text" name="cena" placeholder="Ievadi maršruta cenu*" required>
+                            <input type="text" name="cena" placeholder="Ievadi maršruta cenu*" autocomplete="off" required>
                         </td>
                     </tr>
                     <tr>
                         <td>Galapunkta tālrunis:</td>
                         <td class="tableValue" id="plats">
-                            <input type="text" name="talrunis" placeholder="Ievadi tālruni">
+                            <input type="text" name="talrunis" placeholder="Ievadi tālruni" autocomplete="off">
                         </td>
                     </tr>
                     <tr>
                         <td>Galapunkta e-pasts:</td>
                         <td class="tableValue" id="plats">
-                            <input type="text" name="epasts" placeholder="Ievadi e-pastu">
+                            <input type="text" name="epasts" placeholder="Ievadi e-pastu" autocomplete="off">
                         </td>
                     </tr>
                     <tr>

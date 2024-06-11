@@ -15,19 +15,19 @@ $page = "administratori";
                     <tr>
                         <td>Vārds:</td>
                         <td class="tableValue" >
-                            <input type="text" name="vards" placeholder="Ievadi vārdu*" required>
+                            <input type="text" name="vards" placeholder="Ievadi vārdu*" autocomplete="off" required>
                         </td>
                     </tr>
                     <tr>
                     <td>lietotājvārds:</td>
                         <td class="tableValue" >
-                            <input type="text" name="lietotajvards" placeholder="Ievadi lietotājvārdu*" required>
+                            <input type="text" name="lietotajvards" placeholder="Ievadi lietotājvārdu*" autocomplete="off" required>
                         </td>
                     </tr>
                     <tr>
                     <td>Parole:</td>
                         <td class="tableValue" >
-                            <input type="password" name="parole" placeholder="Ievadi paroli*" required>
+                            <input type="password" name="parole" placeholder="Ievadi paroli*" autocomplete="off" required>
                         </td>
                     </tr>
                     <tr>

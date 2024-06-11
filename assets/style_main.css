@@ -373,7 +373,7 @@ width: 9.4rem;
     width: 100%;
 }
 #kontakti form .box:hover{
-    transform: scale(1.03); 
+    transform: scale(1.01); 
     transition: transform 0.3s ease;
   }
 
@@ -652,7 +652,7 @@ footer p{
   }
   #pieteikums form{
     margin-top: 2rem;
-    background: rgba(161, 91, 22, 0.1);
+    background: rgba(255, 247, 240, 46%);
     padding: 1.5rem 2rem;
     
     border-radius: var(--radius);
@@ -676,13 +676,13 @@ footer p{
     transform: none;
   }
   #pieteikums form input.box:hover, #pieteikums form select.box:hover{
-    transform: scale(1.05); 
+    transform: scale(1.01); 
     transition: transform 0.3s ease;
   }
+
   #pieteikums label{
-    font-size: 1.1rem;
-    text-align: left;
-    color:#666;
+    font-size: 1.5rem;
+    color: var(--text);
   }
   
 

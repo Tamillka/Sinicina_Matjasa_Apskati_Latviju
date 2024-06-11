@@ -8,9 +8,9 @@ require "assets/connect_db.php"; // Pārvietots augstāk, lai būtu pieejams gan
 <div class="filtri">
     <form method="get" action="">
         <select name="pilseta" id="pilseta">
-            <option value="">Izvēlieties pilsētu</option>
+            <option value="">Visas pilsētas</option>
             <?php
-            $pilsetas_SQL = "SELECT DISTINCT Pilseta FROM apskati_pilsetas_marsruti";
+            $pilsetas_SQL = "SELECT DISTINCT Pilseta FROM apskati_pilsetas_marsruti order by Pilseta";
             $pilsetas_rezultats = mysqli_query($savienojums, $pilsetas_SQL);
             while($pilseta = mysqli_fetch_assoc($pilsetas_rezultats)){
                 $selected = '';
@@ -22,7 +22,7 @@ require "assets/connect_db.php"; // Pārvietots augstāk, lai būtu pieejams gan
             ?>
         </select>
         <select name="cena" id="cena">
-            <option value="">Izvēlieties cenu</option>
+            <option value="">Visas cenas</option>
             <option value="2">Līdz 2 eur</option>
             <option value="5">Līdz 5 eur</option>
             <option value="10">Līdz 10 eur</option>

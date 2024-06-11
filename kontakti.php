@@ -25,9 +25,9 @@ require "header.php";
    <div class="row">
     <form action = "" method = "post">
         <div class="box-container">
-        <input type="text" name="vards" placeholder="Vārds" class="box" required>
-        <input type="email" name="epasts" placeholder="E-pasts" class="box" required>
-        <input type="tel" name="talrunis" placeholder="Tālrunis" class="box" required>
+        <input type="text" name="vards" placeholder="Vārds" class="box" autocomplete="off" required>
+        <input type="email" name="epasts" placeholder="E-pasts" class="box" autocomplete="off" required>
+        <input type="tel" name="talrunis" placeholder="Tālrunis" class="box" autocomplete="off" required>
         </div>
         <textarea name="zinojums" placeholder="Tava ziņa" class="box" required></textarea>
         <button type="submit" class="btn" name="nosutit">Sazināties</button>

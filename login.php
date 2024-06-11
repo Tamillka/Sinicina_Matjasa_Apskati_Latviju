@@ -20,8 +20,8 @@ require "assets/connect_db.php";
                 ?>
         </div>
         <form method="POST">
-        <input type="text" name="lietotajvards" placeholder="Lietotājvārds" class="input" required>
-         <input type="password" name="parole" placeholder="Parole" class="input" required>
+        <input type="text" name="lietotajvards" placeholder="Lietotājvārds" class="input" autocomplete="off" required>
+         <input type="password" name="parole" placeholder="Parole" class="input" autocomplete="off" required>
          <button class = "btn" name="ielogoties">IELOGOTIES</button> 
          <a href="index.php" class="btn sakums">Doties uz sākumlapu</a>
 </form>

@@ -15,19 +15,19 @@ $page = "aktualitates";
                     <tr>
                         <td>Aktuālitāte:</td>
                         <td class="tableValue" id="plats">
-                            <input type="text" name="nosaukums" placeholder="Ievadi aktuālitātes nosaukumu*" required>
+                            <input type="text" name="nosaukums" placeholder="Ievadi aktuālitātes nosaukumu*" autocomplete="off" required>
                         </td>
                     </tr>
                     <tr>
                         <td>Apraksts:</td>
                         <td class="tableValue apraksts" id="plats">
-                            <textarea name="apraksts" placeholder="Ievadi aktuālitātes aprakstu*" required></textarea>
+                            <textarea name="apraksts" placeholder="Ievadi aktuālitātes aprakstu*" autocomplete="off" required></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td>Attēls:</td>
                         <td class="tableValue" id="plats">
-                            <input type="text" name="attels" placeholder="Ievadi attēla URL*" required>
+                            <input type="text" name="attels" placeholder="Ievadi attēla URL*" autocomplete="off" required>
                         </td>
                     </tr>
                     <tr>
