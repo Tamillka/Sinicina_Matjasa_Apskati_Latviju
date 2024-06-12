@@ -77,7 +77,7 @@ $page = "piedavajumi";
 
                     $pievienot_SQL = "INSERT INTO apskati_piedavajumi (Nosaukums, Apraksts, Attels, Karte, Cena, Talrunis, Epasts) VALUES ('$nosaukums_ievade', '$apraksts_ievade', '$attels_ievade', '$karte_ievade', '$cena_ievade', '$talrunis_ievade', '$epasts_ievade')";
                     if(mysqli_query($savienojums, $pievienot_SQL)){
-                    echo "<div class='notif green'>Pievienots</div>";
+                    echo "<div class='notif green'>Piedāvājums tiek veiksmīgi pievienots!</div>";
                     header("Refresh: 2, url=./piedavajumi.php");
                 }else{
                     echo "<div class='notif red'>Kļūda sistēmā!</div>";

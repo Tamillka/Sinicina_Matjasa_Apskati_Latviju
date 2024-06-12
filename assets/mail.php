@@ -44,10 +44,10 @@ try {
 
     $mail->send();
     echo "<div id='pazinojums'>
-    <p>Ziņa nosūtīta! Sazināsimies ar Jums kaut kad!!!
+    <p>Ziņa nosūtīta! Sazināsimies ar Jums vēlāk!
     </p>
     </div>";
-    header("Refresh: 2; url=./kontakti.php");
+    header("Refresh: 3; url=./kontakti.php");
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }

@@ -38,7 +38,7 @@ $page = "administratori";
         $id = $_POST["deleteAdm"];
         $sql = "DELETE FROM apskati_lietotaji WHERE LietotajsID='$id'";
         if(mysqli_query($savienojums, $sql)){
-            echo "<div class='notif green'>Administrators dzēsts!</div>";
+            echo "<div class='notif green'>Moderators tiek veiksmīgi izdzēsts!</div>";
             echo "<script>setTimeout(function(){ window.location.href = './administratori.php'; }, 2000);</script>";
         } else {
             echo "<div class='notif red'>Kļūda dzēšot administratoru!</div>";
@@ -80,7 +80,7 @@ $page = "administratori";
         $id = $_POST["deleteModer"];
         $sql = "DELETE FROM apskati_lietotaji WHERE LietotajsID='$id'";
         if(mysqli_query($savienojums, $sql)){
-            echo "<div class='notif green'>Moderators dzēsts!</div>";
+            echo "<div class='notif green'>Moderators tiek veiksmīgi izdzēsts!</div>";
             echo "<script>setTimeout(function(){ window.location.href = './administratori.php'; }, 2000);</script>";
         } else {
             echo "<div class='notif red'>Kļūda dzēšot moderatoru!</div>";

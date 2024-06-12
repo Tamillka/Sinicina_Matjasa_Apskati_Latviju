@@ -170,7 +170,7 @@ nav a:hover{
 /*admin*/
 
 .notif{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-align: center;
     margin: 1rem 5rem;
     padding: 1rem;
@@ -434,6 +434,21 @@ footer{
     font-size: 1.3rem;
     font-weight: bold;
     padding: 1rem .2rem;
+}
+
+#parslegsana{
+    text-decoration: none;
+    padding: .4rem .7rem;
+    margin: .5rem 0;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--black);
+}
+#parslegsana:hover{
+    background: var(--bg);
+    border-radius: var(--radius);
+    color: var(--maincolor);
 }
 /* Animācijas definīcija */
 @keyframes slideInUp {

@@ -45,7 +45,7 @@ $page = "aktualitates";
         $id = $_POST["dzestAkt"];
         $sql = "DELETE FROM apskati_aktualitates WHERE Aktualitates_ID='$id'";
         if(mysqli_query($savienojums, $sql)){
-            echo "<div class='notif green'>Aktualitāte dzēsta!</div>";
+            echo "<div class='notif green'>Aktualitāte ir veiksmīgi izdzēsta!</div>";
             echo "<script>setTimeout(function(){ window.location.href = './aktualitates.php'; }, 2000);</script>";
         } else {
             echo "<div class='notif red'>Kļūda dzēšot aktualitāti!</div>";

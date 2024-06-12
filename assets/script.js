@@ -53,12 +53,12 @@ function toggleInfo(id) {
     });
 
 
-    let menu = document.querySelector('#menu-btn')
+let menu = document.querySelector('#menu-btn')
 let navbar = document.querySelector('nav')
 
 menu.onclick = () => {
     navbar.classList.toggle('active')
-    menu.classList.toggle('fa-times') //piliek ikonu - krustinu
+    menu.classList.toggle('fa-times') //pieliek ikonu - krustinu
 }
 window.onscroll = () =>{
     navbar.classList.remove('active')
@@ -73,4 +73,28 @@ x = () => {
     let alert = document.getElementById("pazinojums")
     alert.style.display = "none"
 }
+
+document.querySelector('.filter-icon').addEventListener('click', function() {
+    var filterForm = document.querySelector('.filtri');
+    if (filterForm.style.display === 'none' || filterForm.style.display === '') {
+        filterForm.style.display = 'block';
+    } else {
+        filterForm.style.display = 'none';
+    }
+});
+
+
+var expanded = false;
+
+function showCheckboxes() {
+    var checkboxes = document.getElementById("checkboxes");
+    if (!expanded) {
+        checkboxes.style.display = "block";
+        expanded = true;
+    } else {
+        checkboxes.style.display = "none";
+        expanded = false;
+    }
+}
+
 

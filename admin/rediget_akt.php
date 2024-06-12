@@ -63,7 +63,7 @@ $page = "aktualitates";
 
                     $rediget_SQL = "UPDATE apskati_aktualitates SET Nosaukums = '$nosaukums_ievade', Apraksts = '$apraksts_ievade', Attels = '$attels_ievade' WHERE Aktualitates_ID = $akt_ID";
                     if(mysqli_query($savienojums, $rediget_SQL)){
-                        echo "<div class='notif green'>Rediģēts</div>";
+                        echo "<div class='notif green'>Aktualitāte ir vieksmīgi rediģēta!</div>";
                         echo "<script>setTimeout(function(){ window.location.href = './aktualitates.php'; }, 2000);</script>";
                     } else {
                         echo "<div class='notif red'>Kļūda sistēmā!</div>";

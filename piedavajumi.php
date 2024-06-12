@@ -5,47 +5,67 @@ require "assets/connect_db.php"; // Pārvietots augstāk, lai būtu pieejams gan
 ?>
 
 <section id="VisiPiedavajumi" class="animate">
-<div class="filtri">
-    <form method="get" action="">
-        <select name="pilseta" id="pilseta">
-            <option value="">Visas pilsētas</option>
-            <?php
-            $pilsetas_SQL = "SELECT DISTINCT Pilseta FROM apskati_pilsetas_marsruti order by Pilseta";
-            $pilsetas_rezultats = mysqli_query($savienojums, $pilsetas_SQL);
-            while($pilseta = mysqli_fetch_assoc($pilsetas_rezultats)){
-                $selected = '';
-                if (isset($_GET['pilseta']) && $_GET['pilseta'] == $pilseta['Pilseta']) {
-                    $selected = 'selected';
-                }
-                echo "<option value=\"{$pilseta['Pilseta']}\" $selected>{$pilseta['Pilseta']}</option>";
-            }
-            ?>
-        </select>
-        <select name="cena" id="cena">
-            <option value="">Visas cenas</option>
-            <option value="2">Līdz 2 eur</option>
-            <option value="5">Līdz 5 eur</option>
-            <option value="10">Līdz 10 eur</option>
-            <!-- Turpiniet pievienot citas cenu opcijas, ja nepieciešams -->
-        </select>
-        <button type="submit" class="btn">Filtrēt</button>
-    </form>
-</div>
+<div class="filter-container">
+        <i class="fas fa-filter filter-icon"></i>
+        <div class="filtri">
+            <form method="get" action="" id="filter-form">
+                <div class="multiselect">
+                    <div class="selectBox" onclick="showCheckboxes()">
+                        <select>
+                            <option>None selected</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+                    <div id="checkboxes">
+                        <?php
+                        require "assets/connect_db.php"; // Ensure this path is correct for your setup
+                        $pilsetas_SQL = "SELECT DISTINCT Pilseta FROM apskati_pilsetas_marsruti ORDER BY Pilseta";
+                        $pilsetas_rezultats = mysqli_query($savienojums, $pilsetas_SQL);
+                        while($pilseta = mysqli_fetch_assoc($pilsetas_rezultats)){
+                            $checked = '';
+                            if (isset($_GET['pilseta']) && in_array($pilseta['Pilseta'], $_GET['pilseta'])) {
+                                $checked = 'checked';
+                            }
+                            echo "<label><input type='checkbox' name='pilseta[]' value=\"{$pilseta['Pilseta']}\" $checked />{$pilseta['Pilseta']}</label>";
+                        }
+                        ?>
+                    </div>
+                </div>
+                <select name="cena" id="cena">
+                    <option value="">Visas cenas</option>
+                    <option value="2" <?php if (isset($_GET['cena']) && $_GET['cena'] == '2') echo 'selected'; ?>>Līdz 2 eur</option>
+                    <option value="5" <?php if (isset($_GET['cena']) && $_GET['cena'] == '5') echo 'selected'; ?>>Līdz 5 eur</option>
+                    <option value="10" <?php if (isset($_GET['cena']) && $_GET['cena'] == '10') echo 'selected'; ?>>Līdz 10 eur</option>
+                </select>
+                <button type="submit" class="btn">Filtrēt</button>
+            </form>
+        </div>
+    </div>
+
     <h1><span>Mūsu piedāvājumi</span></h1>
     <div class="box-container1">
-    <?php
-       $piedavajumiSQL = "SELECT p.* FROM apskati_piedavajumi p JOIN apskati_pilsetas_marsruti m ON m.id_marsruts = p.PiedavajumsID";
-if (isset($_GET['pilseta']) && $_GET['pilseta'] != '') {
-    $selectedPilseta = mysqli_real_escape_string($savienojums, $_GET['pilseta']);
-    $piedavajumiSQL .= " WHERE m.Pilseta = '$selectedPilseta'";
-}
+        <?php
+        $piedavajumiSQL = "SELECT p.* FROM apskati_piedavajumi p JOIN apskati_pilsetas_marsruti m ON m.id_marsruts = p.PiedavajumsID";
+        $whereClauses = array();
 
-if (isset($_GET['cena']) && $_GET['cena'] != '') {
-    $selectedCena = mysqli_real_escape_string($savienojums, $_GET['cena']);
-    $piedavajumiSQL .= " AND Cena <= '$selectedCena'";
-}
+        if (isset($_GET['pilseta']) && !empty($_GET['pilseta'])) {
+            $selectedPilsetas = array_map(function($pilseta) use ($savienojums) {
+                return mysqli_real_escape_string($savienojums, $pilseta);
+            }, $_GET['pilseta']);
+            $pilsetaList = "'" . implode("','", $selectedPilsetas) . "'";
+            $whereClauses[] = "m.Pilseta IN ($pilsetaList)";
+        }
 
-$piedavajumiSQL .= " GROUP BY p.PiedavajumsID ORDER BY p.Piev_Datums DESC";
+        if (isset($_GET['cena']) && $_GET['cena'] != '') {
+            $selectedCena = mysqli_real_escape_string($savienojums, $_GET['cena']);
+            $whereClauses[] = "Cena <= '$selectedCena'";
+        }
+
+        if (!empty($whereClauses)) {
+            $piedavajumiSQL .= " WHERE " . implode(' AND ', $whereClauses);
+        }
+
+        $piedavajumiSQL .= " GROUP BY p.PiedavajumsID ORDER BY p.Piev_Datums DESC";
         $atlasaPiedavajumi = mysqli_query($savienojums, $piedavajumiSQL);
 
         if (mysqli_num_rows($atlasaPiedavajumi) > 0) {
@@ -60,9 +80,9 @@ $piedavajumiSQL .= " GROUP BY p.PiedavajumsID ORDER BY p.Piev_Datums DESC";
                     </div>
                     <p>{$piedavajums['Apraksts']}</p>
                     <p><b>Cena:</b> no {$piedavajums['Cena']} eur</p>
-                    <p><b>Adrese: </b>{$piedavajums['Adrese']}</p>
                     <button type='button' class='btn2' onclick='toggleInfo(\"info-{$nosaukumsId}\")'><span>Lasīt vairāk</span></button>
                     <div id='info-{$nosaukumsId}' style='display: none;'>
+                        <p>Adrese: <b>{$piedavajums['Adrese']}</b></p>
                         <p>Galapunkta tālrunis: <b>{$piedavajums['Talrunis']}</b></p>
                         <p>Galapunkta e-pasts: <b>{$piedavajums['Epasts']}</b></p>
                     </div>
@@ -75,7 +95,7 @@ $piedavajumiSQL .= " GROUP BY p.PiedavajumsID ORDER BY p.Piev_Datums DESC";
         } else {
             echo "Nav nevienu piedāvājumu";
         }
-    ?>
+        ?>
     </div>
 </section>
 

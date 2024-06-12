@@ -83,7 +83,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
 } else {
     echo "<div class='notif red'>Kaut kas nogāja greizi! Atgriezies sākumlapā, mēģini vēlreiz!</div>";
-    header("Refresh: 1; url=./piedavajumi.php");
+    header("Refresh: 2; url=piedavajumi.php");
 }
 ?>
 </section>

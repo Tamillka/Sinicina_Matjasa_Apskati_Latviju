@@ -31,6 +31,7 @@ html{
     scroll-padding-top: 5rem;
 }
 
+
 #menu-btn{
     cursor: pointer;
     font-size: 2.5rem;
@@ -584,6 +585,91 @@ form textarea{
   #VisiPiedavajumi{
         padding-top: 7.2rem;
   }
+  .filtri {
+    display: none; /* Hide the form initially */
+    margin-top: 10px;
+    user-select: none; 
+   
+}
+.filter-icon {
+    margin-top: 1rem;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    font-size: 2.3rem;
+    color: var(--maincolor);
+    margin-right: 1rem;
+
+}
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+#filter-form {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 13rem;
+}
+
+.multiselect {
+    width: 200px;
+    
+}
+
+.selectBox {
+    position: relative;
+  
+}
+
+.selectBox select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    
+}
+
+#checkboxes {
+    display: none;
+    border: 1px solid var(--border);
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    background-color: var(--bg);
+    border: .1rem solid #ccc;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: .5rem;
+}
+#checkboxes input{
+    margin-right: .7rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+#checkboxes label {
+    display: block;
+    color: var(--text);
+    font-size: 1.2rem;
+
+}
+
+#checkboxes label:hover {
+    background-color: var(--maincolor);
+}
+
 
   footer{
     padding: 1rem 0 2rem 0;
@@ -688,9 +774,13 @@ footer p{
 
   /* Pieteikšanās notifications */
   .notif{
-    font-size: 1.2rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    z-index: 3;
+    font-size: 1.4rem;
     text-align: center;
-    margin: 1rem 5rem;
     padding: 1rem;
     color: #eee;
     border-radius: var(--radius);
@@ -706,31 +796,24 @@ footer p{
 
 
 #pazinojums{
-    margin-top: 1.5rem;
-    width: 40%;
+    /* margin-top: 1.5rem; */
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
     text-align: center;
     background: var(--bg);
     box-shadow: var(--box-shadow);
     color: var(--text);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     /* display: block; */
-    padding: .8rem 1rem;
+    padding: 1.2rem 1rem;
 }
 #pazinojums p{
     animation: blinker 2s linear infinite;
-}
- #pazinojums a{
-    cursor: pointer;
-    border: 2px solid #fff;
-    padding: .1rem .4rem;
-    font-weight: normal;
-} 
-
-#pazinojums a:hover{
-    color: rgb(107, 6, 6);
-    border: 3px solid #000;
-
 }
 
 .filtri select{

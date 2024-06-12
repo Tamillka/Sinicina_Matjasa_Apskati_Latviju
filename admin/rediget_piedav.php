@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $rediget_SQL = "UPDATE apskati_piedavajumi SET Attels = '$attels_ievade', Nosaukums = '$nosaukums_ievade', Cena = '$cena_ievade', Apraksts = '$apraksts_ievade', Karte = '$karte_ievade', Talrunis = '$talrunis_ievade', Epasts = '$epasts_ievade' WHERE PiedavajumsID = $pied_ID";
         if (mysqli_query($savienojums, $rediget_SQL)) {
-            echo "<div class='notif green'>Rediģēts piedāvājums</div>";
+            echo "<div class='notif green'>Piedāvājums ir vieksmīgi rediģēts!</div>";
             echo "<script>setTimeout(function(){ window.location.href = './piedavajumi.php'; }, 2000);</script>";
         } else {
             echo "<div class='notif red'>Kļūda sistēmā!</div>";
@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $pievienot_SQL = "INSERT INTO apskati_pilsetas_marsruti (Pilseta, id_marsruts) VALUES ('$izbPil_ievade', $pied_ID)";
         if (mysqli_query($savienojums, $pievienot_SQL)) {
-            echo "<div class='notif green'>Pievienota pilsēta</div>";
+            echo "<div class='notif green'>Pilsēta tiek veiksmīgi pievienota!</div>";
             echo "<script>setTimeout(function(){ window.location.href = './piedavajumi.php'; }, 1000);</script>";
         } else {
             echo "<div class='notif red'>Kļūda sistēmā!</div>";

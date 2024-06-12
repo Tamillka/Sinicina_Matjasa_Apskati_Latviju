@@ -56,14 +56,14 @@ $page = "administratori";
                     $pievienot_SQL = "INSERT INTO apskati_lietotaji (Vards, Lietotajvards, Parole, Liet_Stat) VALUES ('$vards_ievade', '$lietotajv_ievade', '$hashedPassword', 1)";
                     if(mysqli_query($savienojums, $pievienot_SQL)){
 
-                    echo "<div class='notif green'>Administrators pievienots</div>";
+                    echo "<div class='notif green'>Moderators tiek veiksmīgi pievienots!</div>";
                     header("Refresh: 2, url=./administratori.php");
                 }else{
                     echo "<div class='notif red'>Kļūda sistēmā!</div>";
                     header("Refresh: 2, url=./administratori.php");
                     }
                 }else{
-                    echo "<div class='notif red'>Šāds lietotājvārds ir reģistrēts!</div>";
+                    echo "<div class='notif red'>Lietotājvārds ir reģistrēts!</div>";
                     header("Refresh: 2, url=./administratori.php");
                 }
             }       
