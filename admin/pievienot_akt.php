@@ -49,7 +49,7 @@ $page = "aktualitates";
 
                     $pievienot_SQL = "INSERT INTO apskati_aktualitates (Nosaukums, Apraksts, Attels) VALUES ('$nosaukums_ievade', '$apraksts_ievade', '$attels_ievade')";
                     if(mysqli_query($savienojums, $pievienot_SQL)){
-                    echo "<div class='notif green'>Pievienots</div>";
+                    echo "<div class='notif green'>Aktuālitāte veiksmīgi pievienota!</div>";
                     header("Refresh: 2, url=./aktualitates.php");
                 }else{
                     echo "<div class='notif red'>Kļūda sistēmā!</div>";

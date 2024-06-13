@@ -74,14 +74,7 @@ x = () => {
     alert.style.display = "none"
 }
 
-document.querySelector('.filter-icon').addEventListener('click', function() {
-    var filterForm = document.querySelector('.filtri');
-    if (filterForm.style.display === 'none' || filterForm.style.display === '') {
-        filterForm.style.display = 'block';
-    } else {
-        filterForm.style.display = 'none';
-    }
-});
+
 
 
 var expanded = false;
@@ -97,4 +90,21 @@ function showCheckboxes() {
     }
 }
 
+function showCheckboxes() {
+    var checkboxes = document.getElementById("checkboxes");
+    if (checkboxes.style.display === "block") {
+        checkboxes.style.display = "none";
+    } else {
+        checkboxes.style.display = "block";
+    }
+}
+
+function toggleCheckboxes(selectAllCheckbox) {
+    var checkboxes = document.querySelectorAll('#checkboxes input[type="checkbox"]');
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i] !== selectAllCheckbox) {
+            checkboxes[i].checked = selectAllCheckbox.checked;
+        }
+    }
+}
 

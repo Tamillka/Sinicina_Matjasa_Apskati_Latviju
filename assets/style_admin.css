@@ -170,9 +170,14 @@ nav a:hover{
 /*admin*/
 
 .notif{
-    font-size: 1.3rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 3;
+    font-size: 1.4rem;
     text-align: center;
-    margin: 1rem 5rem;
+    margin-left: 20%;
     padding: 1rem;
     color: #eee;
     border-radius: var(--radius);

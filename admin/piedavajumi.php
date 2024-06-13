@@ -53,7 +53,7 @@ $page = "piedavajumi";
         $sql = "DELETE FROM apskati_piedavajumi WHERE PiedavajumsID='$id'";
         if(mysqli_query($savienojums, $sql)){
             echo "<div class='notif green'>Piedāvājums tiek veiksmīgi izdzēsts!</div>";
-            echo "<script>setTimeout(function(){ window.location.href = './aktualitates.php'; }, 2000);</script>";
+            echo "<script>setTimeout(function(){ window.location.href = './piedavajumi.php'; }, 2000);</script>";
         } else {
             echo "<div class='notif red'>Kļūda dzēšot piedāvājumu!</div>";
         }

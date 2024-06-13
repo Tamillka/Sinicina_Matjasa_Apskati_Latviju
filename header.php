@@ -19,7 +19,7 @@
             <a href="piedavajumi.php" class="<?php echo ($page == 'piedavajumi' ? 'current' : ''); ?>">Piedāvājumi</a>       
             <a href="kontakti.php" class="<?php echo ($page == 'kontakti' ? 'current' : ''); ?>">Kontakti</a> 
             </div>
-            <div class="button"><a href="login.php" class="btn log">Ielogoties</a></div>
+            <a href="login.php" class="btn log"><i class="fas fa-user"></i></a>
 
         </nav>
         

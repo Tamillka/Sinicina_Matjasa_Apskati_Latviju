@@ -586,7 +586,6 @@ form textarea{
         padding-top: 7.2rem;
   }
   .filtri {
-    display: none; /* Hide the form initially */
     margin-top: 10px;
     user-select: none; 
    
@@ -596,9 +595,7 @@ form textarea{
     text-align: center;
     align-items: center;
     cursor: pointer;
-    width: 2rem;
-    height: 2rem;
-    font-size: 2.3rem;
+    font-size: 2rem;
     color: var(--maincolor);
     margin-right: 1rem;
 
@@ -612,6 +609,7 @@ form textarea{
 #filter-form {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 1rem;
     width: 13rem;
 }
@@ -623,13 +621,6 @@ form textarea{
 
 .selectBox {
     position: relative;
-  
-}
-
-.selectBox select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
 }
 
 .overSelect {
@@ -637,9 +628,9 @@ form textarea{
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
-    
+    bottom: 0;  
 }
+
 
 #checkboxes {
     display: none;

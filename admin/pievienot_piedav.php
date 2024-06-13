@@ -79,6 +79,7 @@ $page = "piedavajumi";
                     if(mysqli_query($savienojums, $pievienot_SQL)){
                     echo "<div class='notif green'>Piedāvājums tiek veiksmīgi pievienots!</div>";
                     header("Refresh: 2, url=./piedavajumi.php");
+                    
                 }else{
                     echo "<div class='notif red'>Kļūda sistēmā!</div>";
                     header("Refresh: 2, url=./piedavajumi.php");

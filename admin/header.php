@@ -62,7 +62,7 @@ $_SESSION['Liet_Stat'] = $user['Liet_Stat'];
                 <?php if ($_SESSION['Liet_Stat'] == 0): ?>
                     <a href="administratori.php" class="<?php echo ($page == 'administratori' ? 'current' : ''); ?>">Administratori</a>
                 <?php endif; ?>
-                <a href="../index.php" class="btn log"><i class="fas fa-sign-out-alt"></i> Uz galveno lapu</a>
+                <a href="logoout.php" class="btn log"><i class="fas fa-sign-out-alt"></i> Uz galveno lapu</a>
             </nav>
         </aside>
     </div>

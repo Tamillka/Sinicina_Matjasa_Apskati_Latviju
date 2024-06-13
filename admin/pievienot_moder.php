@@ -31,6 +31,12 @@ $page = "administratori";
                         </td>
                     </tr>
                     <tr>
+                    <td>Parole:</td>
+                        <td class="tableValue" >
+                            <input type="password" name="parole1" placeholder="Ievadi paroli vēlreiz*" autocomplete="off" required>
+                        </td>
+                    </tr>
+                    <tr>
                         <td colspan=2>
                             <button class="btn piev" type="submit" name="pievienot">Pievienot</button>
                         </td>
@@ -46,6 +52,9 @@ $page = "administratori";
                     $vards_ievade = mysqli_real_escape_string($savienojums, $_POST['vards']);
                     $lietotajv_ievade = mysqli_real_escape_string($savienojums, $_POST['lietotajvards']);
                     $parole_ievade = mysqli_real_escape_string($savienojums, $_POST['parole']);
+                    $parole1_ievade = mysqli_real_escape_string($savienojums, $_POST["parole1"]);
+
+                    if ($parole_ievade == $parole1_ievade) {
 
                     $existingUserQuery = "SELECT * FROM apskati_lietotaji WHERE Lietotajvards = '$lietotajv_ievade'";
                     $existingUserResult = mysqli_query($savienojums, $existingUserQuery);
@@ -66,6 +75,10 @@ $page = "administratori";
                     echo "<div class='notif red'>Lietotājvārds ir reģistrēts!</div>";
                     header("Refresh: 2, url=./administratori.php");
                 }
+            }else{
+                echo "<div class='notif red'>Paroles nesakrīt!</div>";
+                    header("Refresh: 2, url=./administratori.php");
+            }
             }       
         }
             ?>

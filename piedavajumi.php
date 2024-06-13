@@ -8,37 +8,40 @@ require "assets/connect_db.php"; // Pārvietots augstāk, lai būtu pieejams gan
 <div class="filter-container">
         <i class="fas fa-filter filter-icon"></i>
         <div class="filtri">
-            <form method="get" action="" id="filter-form">
-                <div class="multiselect">
-                    <div class="selectBox" onclick="showCheckboxes()">
-                        <select>
-                            <option>None selected</option>
-                        </select>
-                        <div class="overSelect"></div>
-                    </div>
-                    <div id="checkboxes">
-                        <?php
-                        require "assets/connect_db.php"; // Ensure this path is correct for your setup
-                        $pilsetas_SQL = "SELECT DISTINCT Pilseta FROM apskati_pilsetas_marsruti ORDER BY Pilseta";
-                        $pilsetas_rezultats = mysqli_query($savienojums, $pilsetas_SQL);
-                        while($pilseta = mysqli_fetch_assoc($pilsetas_rezultats)){
-                            $checked = '';
-                            if (isset($_GET['pilseta']) && in_array($pilseta['Pilseta'], $_GET['pilseta'])) {
-                                $checked = 'checked';
-                            }
-                            echo "<label><input type='checkbox' name='pilseta[]' value=\"{$pilseta['Pilseta']}\" $checked />{$pilseta['Pilseta']}</label>";
-                        }
-                        ?>
-                    </div>
-                </div>
-                <select name="cena" id="cena">
-                    <option value="">Visas cenas</option>
-                    <option value="2" <?php if (isset($_GET['cena']) && $_GET['cena'] == '2') echo 'selected'; ?>>Līdz 2 eur</option>
-                    <option value="5" <?php if (isset($_GET['cena']) && $_GET['cena'] == '5') echo 'selected'; ?>>Līdz 5 eur</option>
-                    <option value="10" <?php if (isset($_GET['cena']) && $_GET['cena'] == '10') echo 'selected'; ?>>Līdz 10 eur</option>
-                </select>
-                <button type="submit" class="btn">Filtrēt</button>
-            </form>
+        <form method="get" action="" id="filter-form">
+    <div class="multiselect">
+        <div class="selectBox" onclick="showCheckboxes()">
+            <select>
+                <option>Pilsētas</option>
+            </select>
+            <div class="overSelect"></div>
+        </div>
+        <div id="checkboxes">
+            <label><input type="checkbox" id="selectAll" onclick="toggleCheckboxes(this)" />Visas pilsētas</label>
+            <?php
+            require "assets/connect_db.php"; // Ensure this path is correct for your setup
+            $pilsetas_SQL = "SELECT DISTINCT Pilseta FROM apskati_pilsetas_marsruti ORDER BY Pilseta";
+            $pilsetas_rezultats = mysqli_query($savienojums, $pilsetas_SQL);
+            while($pilseta = mysqli_fetch_assoc($pilsetas_rezultats)){
+                $checked = '';
+                if (isset($_GET['pilseta']) && in_array($pilseta['Pilseta'], $_GET['pilseta'])) {
+                    $checked = 'checked';
+                }
+                echo "<label><input type='checkbox' name='pilseta[]' value=\"{$pilseta['Pilseta']}\" $checked />{$pilseta['Pilseta']}</label>";
+            }
+            ?>
+        </div>
+    </div>
+    <select name="cena" id="cena">
+        <option value="">Visas cenas</option>
+        <option value="2" <?php if (isset($_GET['cena']) && $_GET['cena'] == '2') echo 'selected'; ?>>Līdz 2 eur</option>
+        <option value="5" <?php if (isset($_GET['cena']) && $_GET['cena'] == '5') echo 'selected'; ?>>Līdz 5 eur</option>
+        <option value="10" <?php if (isset($_GET['cena']) && $_GET['cena'] == '10') echo 'selected'; ?>>Līdz 10 eur</option>
+    </select>
+    <button type="submit" class="btn">Filtrēt</button>
+</form>
+
+
         </div>
     </div>
 

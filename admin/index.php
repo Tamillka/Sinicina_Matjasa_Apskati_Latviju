@@ -93,18 +93,15 @@ require "../assets/connect_db.php";
                     <th>Pieteikumi kopā</th>
                 </tr>
                 <?php
-                    // SQL query to select the most popular specialties
                     $nosSQL = "SELECT Izv_Marsruts, COUNT(Izv_Marsruts) AS NosCount FROM apskati_klienti GROUP BY Izv_Marsruts ORDER BY NosCount DESC";
                     
-                    // Execute the SQL query
                     $atlasaNosSQL = mysqli_query($savienojums, $nosSQL);
                     
-                    // Loop through the results and display them in a table
                     while($Nosaukums = mysqli_fetch_array($atlasaNosSQL)){
                         echo "
                             <tr>
-                                <td>{$Nosaukums['Izv_Marsruts']}</td> <!-- Display the specialty -->
-                                <td>{$Nosaukums['NosCount']}</td> <!-- Display the count of the specialty -->
+                                <td>{$Nosaukums['Izv_Marsruts']}</td> 
+                                <td>{$Nosaukums['NosCount']}</td> 
                             </tr>
                         ";
                     }
@@ -117,13 +114,9 @@ require "../assets/connect_db.php";
                     <th>Skaits</th>
                 </tr>
                 <?php
-                    // SQL query to select the most popular specialties
                     $pilSQL = "SELECT Pilseta, COUNT(Pilseta) AS PilCount FROM apskati_klienti GROUP BY Pilseta ORDER BY PilCount DESC";
-                    
-                    // Execute the SQL query
                     $atlasaPilSQL = mysqli_query($savienojums, $pilSQL);
                     
-                    // Loop through the results and display them in a table
                     while($Pilseta = mysqli_fetch_array($atlasaPilSQL)){
                         echo "
                             <tr>
